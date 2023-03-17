@@ -7,4 +7,4 @@ This application supports the *ServiceNow Photobooth App* at [https://github.com
 ## Dependencies
 This application requires the [Photobooth Core](https://github.com/ServiceNowNextExperience/photobooth-core) application, which contains the supporting records for snapshots and requests.
 
-However, going to the main Photobooth repo and installing the dependencies listed there is probably a good idea.
+However, going to the main [Photobooth](https://github.com/ServiceNowNextExperience/photobooth) repo and installing the dependencies listed there is probably a good idea.

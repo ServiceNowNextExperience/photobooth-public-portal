@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller = function () {
+  /* widget controller */
+  var c = this;
+
+  console.log(c.data.images);
+};
+]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.main-widget-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  .main-widget-header {
+    h1 {
+      color: #fff;
+      margin-bottom: 24px;
+    }
+  }
+
+  .photobox-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .photobox-image-container {
+    img {
+      max-width: 450px;
+      height: auto;
+    }
+  }
+
+  .buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .k23-btn {
+    margin-bottom: 18px;
+    border-width: 4px;
+    border-style: solid;
+    border-radius: 4px;
+    height: 48px;
+    font-size: 20px;
+    width: 272px;
+  }
+
+  .share-to-now-btn {
+    background: $brand-secondary;
+    border-color: $brand-secondary;
+    color: #fff;
+  }
+
+  .share-to-self-btn {
+    background: transparent;
+    border-color: #fff;
+    color: #fff;
+  }
+
+  .delete-btn {
+    background: transparent;
+    border-color: $brand-tertiary;
+    color: $brand-tertiary;
+  }
+}
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id/>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>K23 Portal Main Widget</name>
+        <option_schema/>
+        <public>true</public>
+        <roles>public</roles>
+        <script><![CDATA[(function () {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+  var requestId = $sp.getParameter("sys_id");
+
+  var grRequest = new GlideRecord("x_snc_pb_core_request");
+  grRequest.addQuery("sys_id", requestId);
+  grRequest.query();
+
+  var requests = [];
+
+  while (grRequest.next()) {
+    var sysId = grRequest.getUniqueValue();
+    requests.push(sysId);
+  }
+
+  var images = [];
+
+  requests.forEach(function (sysId) {
+    var grSnapshot = new GlideRecord("x_snc_pb_core_snapshot");
+    grSnapshot.addQuery("request", sysId);
+    grSnapshot.query();
+
+    while (grSnapshot.next()) {
+      var snapshot = {};
+
+      var imageId = grSnapshot.getValue("image");
+      snapshot.imageId = imageId;
+      snapshot.sysId = grSnapshot.getUniqueValue();
+      snapshot.imageUrl = imageId + ".iix";
+
+      images.push(snapshot);
+    }
+  });
+
+  data.images = images;
+  data.currentImage = images[0];
+})();
+]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>alex.russian</sys_created_by>
+        <sys_created_on>2023-03-22 21:23:40</sys_created_on>
+        <sys_id>e725d87087f9e910fb8dfd57dabb3520</sys_id>
+        <sys_mod_count>51</sys_mod_count>
+        <sys_name>K23 Portal Main Widget</sys_name>
+        <sys_package display_value="Photobooth Public Portal" source="x_snc_pb_public">4af2f1c78761a51089790fe5dabb3505</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Photobooth Public Portal">4af2f1c78761a51089790fe5dabb3505</sys_scope>
+        <sys_update_name>sp_widget_e725d87087f9e910fb8dfd57dabb3520</sys_update_name>
+        <sys_updated_by>alex.russian</sys_updated_by>
+        <sys_updated_on>2023-03-31 21:38:28</sys_updated_on>
+        <template><![CDATA[<div class="main-widget-container">
+  <div class="main-widget-header">
+    <h1>Knowledge '23 Photobooth</h1>
+  </div>
+  <div class="main-content">
+    <div class="photobox-container">
+      <div class="left-arrow-container">
+        <img src="x_snc_pb_public.sn-left-arrow-white.svg" />
+      </div>
+      <div class="photobox-image-container">
+        <img src="{{ c.data.currentImage.imageUrl }}" />
+      </div>
+      <div class="right-arrow-container">
+        <img src="x_snc_pb_public.sn-right-arrow-white.svg" />
+      </div>
+    </div>
+    <div class="buttons-container">
+      <button class="k23-btn share-to-now-btn">share to NOW mural</button>
+      <button class="k23-btn share-to-self-btn">send to email/phone</button>
+      <button class="k23-btn delete-btn">delete</button>
+    </div>
+  </div>
+</div>
+]]></template>
+    </sp_widget>
+</record_update>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
+    <sys_properties action="INSERT_OR_UPDATE">
+        <choices/>
+        <description>If true, portal css would be in rem units</description>
+        <ignore_cache>true</ignore_cache>
+        <is_private>false</is_private>
+        <name>glide.service_portal.resize_text.k23_photobooth.enable_rem_conversion</name>
+        <read_roles/>
+        <suffix/>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>alex.russian</sys_created_by>
+        <sys_created_on>2023-03-22 19:10:29</sys_created_on>
+        <sys_id>03c6f3a48779e910fb8dfd57dabb3569</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>glide.service_portal.resize_text.k23_photobooth.enable_rem_conversion</sys_name>
+        <sys_package display_value="Photobooth Public Portal" source="x_snc_pb_public">4af2f1c78761a51089790fe5dabb3505</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Photobooth Public Portal">4af2f1c78761a51089790fe5dabb3505</sys_scope>
+        <sys_update_name>sys_properties_03c6f3a48779e910fb8dfd57dabb3569</sys_update_name>
+        <sys_updated_by>alex.russian</sys_updated_by>
+        <sys_updated_on>2023-03-22 21:28:16</sys_updated_on>
+        <type>boolean</type>
+        <value>true</value>
+        <write_roles/>
+    </sys_properties>
+    <sys_translated_text action="delete_multiple" query="documentkey=03c6f3a48779e910fb8dfd57dabb3569"/>
+</record_update>

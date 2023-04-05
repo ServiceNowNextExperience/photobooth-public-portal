@@ -1,77 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
     <sp_widget action="INSERT_OR_UPDATE">
         <category>custom</category>
-        <client_script><![CDATA[api.controller = function () {
+        <client_script><![CDATA[api.controller = function ($scope) {
   /* widget controller */
   var c = this;
+  c.currentImageIndex = 0;
 
   console.log(c.data.images);
+
+  $scope.previousImageClick = function () {
+    var previous = c.currentImageIndex - 1;
+    c.currentImageIndex = previous < 0 ? c.data.images.length - 1 : previous;
+  };
+
+  $scope.nextImageClick = function () {
+    var next = c.currentImageIndex + 1;
+    c.currentImageIndex = next === c.data.images.length ? 0 : next;
+  };
 };
 ]]></client_script>
         <controller_as>c</controller_as>
-        <css>.main-widget-container {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-
-  .main-widget-header {
-    h1 {
-      color: #fff;
-      margin-bottom: 24px;
-    }
-  }
-
-  .photobox-container {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 24px;
-    align-items: center;
-    gap: 12px;
-  }
-
-  .photobox-image-container {
-    img {
-      max-width: 450px;
-      height: auto;
-    }
-  }
-
-  .buttons-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .k23-btn {
-    margin-bottom: 18px;
-    border-width: 4px;
-    border-style: solid;
-    border-radius: 4px;
-    height: 48px;
-    font-size: 20px;
-    width: 272px;
-  }
-
-  .share-to-now-btn {
-    background: $brand-secondary;
-    border-color: $brand-secondary;
-    color: #fff;
-  }
-
-  .share-to-self-btn {
-    background: transparent;
-    border-color: #fff;
-    color: #fff;
-  }
-
-  .delete-btn {
-    background: transparent;
-    border-color: $brand-tertiary;
-    color: $brand-tertiary;
-  }
-}
+        <css>.main-widget-container {&#13;
+  height: 100vh;&#13;
+  display: flex;&#13;
+  align-items: center;&#13;
+  justify-content: center;&#13;
+  flex-direction: column;&#13;
+&#13;
+  .main-widget-header {&#13;
+    h1 {&#13;
+      color: #fff;&#13;
+      margin-bottom: 24px;&#13;
+    }&#13;
+  }&#13;
+&#13;
+  .photobox-container {&#13;
+    display: flex;&#13;
+    justify-content: space-between;&#13;
+    margin-bottom: 24px;&#13;
+    align-items: center;&#13;
+    gap: 12px;&#13;
+  }&#13;
+&#13;
+  .photobox-image {&#13;
+    max-width: 450px;&#13;
+    height: auto;&#13;
+&#13;
+    img {&#13;
+      width: 100%;&#13;
+      height: 100%;&#13;
+    }&#13;
+  }&#13;
+&#13;
+  .buttons-container {&#13;
+    display: flex;&#13;
+    flex-direction: column;&#13;
+    align-items: center;&#13;
+  }&#13;
+&#13;
+  .k23-btn {&#13;
+    margin-bottom: 18px;&#13;
+    border-width: 4px;&#13;
+    border-style: solid;&#13;
+    border-radius: 4px;&#13;
+    height: 48px;&#13;
+    font-size: 20px;&#13;
+    width: 272px;&#13;
+  }&#13;
+&#13;
+  .share-to-now-btn {&#13;
+    background: $brand-secondary;&#13;
+    border-color: $brand-secondary;&#13;
+    color: #fff;&#13;
+  }&#13;
+&#13;
+  .disabled-button {&#13;
+    background-color: #ddd;&#13;
+    border-color: #ddd;&#13;
+    pointer-events: none;&#13;
+    user-select: none;&#13;
+    cursor: none;&#13;
+  }&#13;
+&#13;
+  .share-to-self-btn {&#13;
+    background: transparent;&#13;
+    border-color: #fff;&#13;
+    color: #fff;&#13;
+  }&#13;
+&#13;
+  .delete-btn {&#13;
+    background: transparent;&#13;
+    border-color: $brand-tertiary;&#13;
+    color: $brand-tertiary;&#13;
+  }&#13;
+}&#13;
 </css>
         <data_table>sp_instance</data_table>
         <demo_data/>
@@ -114,10 +136,10 @@
     while (grSnapshot.next()) {
       var snapshot = {};
 
-      var imageId = grSnapshot.getValue("image");
-      snapshot.imageId = imageId;
-      snapshot.sysId = grSnapshot.getUniqueValue();
-      snapshot.imageUrl = imageId + ".iix";
+      var snapshotId = grSnapshot.getUniqueValue();
+      snapshot.snapshotId = sysId;
+      snapshot.imageUrl = "api/x_snc_pb_core/photobooth/snapshot/" + snapshotId;
+      snapshot.type = grSnapshot.getValue("snapshot_type");
 
       images.push(snapshot);
     }
@@ -132,14 +154,14 @@
         <sys_created_by>alex.russian</sys_created_by>
         <sys_created_on>2023-03-22 21:23:40</sys_created_on>
         <sys_id>e725d87087f9e910fb8dfd57dabb3520</sys_id>
-        <sys_mod_count>51</sys_mod_count>
+        <sys_mod_count>97</sys_mod_count>
         <sys_name>K23 Portal Main Widget</sys_name>
         <sys_package display_value="Photobooth Public Portal" source="x_snc_pb_public">4af2f1c78761a51089790fe5dabb3505</sys_package>
         <sys_policy/>
         <sys_scope display_value="Photobooth Public Portal">4af2f1c78761a51089790fe5dabb3505</sys_scope>
         <sys_update_name>sp_widget_e725d87087f9e910fb8dfd57dabb3520</sys_update_name>
         <sys_updated_by>alex.russian</sys_updated_by>
-        <sys_updated_on>2023-03-31 21:38:28</sys_updated_on>
+        <sys_updated_on>2023-04-05 22:40:20</sys_updated_on>
         <template><![CDATA[<div class="main-widget-container">
   <div class="main-widget-header">
     <h1>Knowledge '23 Photobooth</h1>
@@ -147,17 +169,30 @@
   <div class="main-content">
     <div class="photobox-container">
       <div class="left-arrow-container">
-        <img src="x_snc_pb_public.sn-left-arrow-white.svg" />
+        <img
+          src="x_snc_pb_public.sn-left-arrow-white.svg"
+          ng-click="previousImageClick()"
+        />
       </div>
-      <div class="photobox-image-container">
-        <img src="{{ c.data.currentImage.imageUrl }}" />
+      <div class="photobox-images-container">
+        <div class="photobox-image">
+          <img src="{{ c.data.images[c.currentImageIndex].imageUrl }}" />
+        </div>
       </div>
       <div class="right-arrow-container">
-        <img src="x_snc_pb_public.sn-right-arrow-white.svg" />
+        <img
+          src="x_snc_pb_public.sn-right-arrow-white.svg"
+          ng-click="nextImageClick()"
+        />
       </div>
     </div>
     <div class="buttons-container">
-      <button class="k23-btn share-to-now-btn">share to NOW mural</button>
+      <button
+        class="k23-btn share-to-now-btn"
+        ng-class="{'disabled-button': c.data.images[c.currentImageIndex].type == 'main'}"
+      >
+        share to NOW mural
+      </button>
       <button class="k23-btn share-to-self-btn">send to email/phone</button>
       <button class="k23-btn delete-btn">delete</button>
     </div>

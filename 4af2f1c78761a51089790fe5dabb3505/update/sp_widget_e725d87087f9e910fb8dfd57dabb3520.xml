@@ -1,43 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
     <sp_widget action="INSERT_OR_UPDATE">
         <category>custom</category>
-        <client_script><![CDATA[api.controller = function ($scope) {
-  /* widget controller */
-  var c = this;
-  c.currentImageIndex = 0;
+        <client_script><![CDATA[api.controller = function($scope, $uibModal) {
+    /* widget controller */
+    var c = this;
+    c.currentImageIndex = 0;
+    c.shareEmail = c.data.requests[0].email || "";
 
-  console.log(c.data.images);
+    console.log(c.data.images);
 
-  $scope.previousImageClick = function () {
-    var previous = c.currentImageIndex - 1;
-    c.currentImageIndex = previous < 0 ? c.data.images.length - 1 : previous;
-  };
+    $scope.openShareToEmail = function() {
+        c.shareToEmailModal = $uibModal.open({
+            templateUrl: "emailShare",
+            scope: $scope,
+        });
+    };
 
-  $scope.nextImageClick = function () {
-    var next = c.currentImageIndex + 1;
-    c.currentImageIndex = next === c.data.images.length ? 0 : next;
-  };
-};
-]]></client_script>
+    $scope.openShareToMural = function() {
+        c.shareToEmailModal = $uibModal.open({
+            templateUrl: "shareToMural",
+            scope: $scope,
+        });
+    };
+
+    $scope.sendPhotoToEmail = function() {
+        console.log("send photo to email");
+
+
+        function updateSnapshot(snapshot) {
+            var sysId = snapshot.sysId;
+            var state = snapshot.state;
+            var integrations = snapshot.integrations;
+            var body = {
+                state: state,
+                integrations: integrations
+            };
+            return fetch('/api/x_snc_pb_core/photobooth/snapshot/' + sysId, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(body)
+            }).then(function(response) {
+                console.log('OK!');
+            }).catch(function(error) {
+                console.log('Error: ' + error);
+            });
+        }
+
+        // Example call here:
+        updateSnapshot({
+            sysId: '35233076470e2d10552caf52736d4399',
+            state: 'Sharing',
+            integrations: 'jon.lind@gmail.com\nK23 Mural Board'
+        });
+
+
+
+        $scope.closeEmailShareModal();
+    };
+
+    $scope.closeEmailShareModal = function() {
+        c.shareToEmailModal.close();
+    };
+
+    $scope.previousImageClick = function() {
+        var previous = c.currentImageIndex - 1;
+        c.currentImageIndex = previous < 0 ? c.data.images.length - 1 : previous;
+    };
+
+    $scope.nextImageClick = function() {
+        var next = c.currentImageIndex + 1;
+        c.currentImageIndex = next === c.data.images.length ? 0 : next;
+    };
+};]]></client_script>
         <controller_as>c</controller_as>
         <css>.main-widget-container {&#13;
-  height: 100vh;&#13;
   display: flex;&#13;
-  align-items: center;&#13;
   justify-content: center;&#13;
   flex-direction: column;&#13;
+  align-items: center;&#13;
+  max-width: 400px;&#13;
+  margin: 0 auto;&#13;
 &#13;
   .main-widget-header {&#13;
+    margin-top: 10px;&#13;
+    margin-bottom: 30px;&#13;
     h1 {&#13;
       color: #fff;&#13;
-      margin-bottom: 24px;&#13;
+      font-size: 22px;&#13;
+      text-align: center;&#13;
     }&#13;
   }&#13;
 &#13;
   .photobox-container {&#13;
     display: flex;&#13;
     justify-content: space-between;&#13;
-    margin-bottom: 24px;&#13;
+    margin-bottom: 12px;&#13;
     align-items: center;&#13;
     gap: 12px;&#13;
   }&#13;
@@ -49,6 +108,20 @@
     img {&#13;
       width: 100%;&#13;
       height: 100%;&#13;
+&#13;
+      border: 2px solid white;&#13;
+    }&#13;
+  }&#13;
+&#13;
+  .arrows-container {&#13;
+    display: flex;&#13;
+    justify-content: space-between;&#13;
+    margin-bottom: 60px;&#13;
+    align-items: center;&#13;
+&#13;
+    .photo-number-label {&#13;
+      color: #fff;&#13;
+      font-size: 18px;&#13;
     }&#13;
   }&#13;
 &#13;
@@ -60,38 +133,64 @@
 &#13;
   .k23-btn {&#13;
     margin-bottom: 18px;&#13;
-    border-width: 4px;&#13;
+    border-width: 2px;&#13;
     border-style: solid;&#13;
     border-radius: 4px;&#13;
-    height: 48px;&#13;
-    font-size: 20px;&#13;
     width: 272px;&#13;
+    padding: 13px 34px;&#13;
+    display: flex;&#13;
+    gap: 16px;&#13;
+    justify-content: center;&#13;
+&#13;
+    img {&#13;
+      width: 16px;&#13;
+      height: auto;&#13;
+    }&#13;
+&#13;
+    span {&#13;
+      font-size: 18px;&#13;
+    }&#13;
   }&#13;
 &#13;
   .share-to-now-btn {&#13;
     background: $brand-secondary;&#13;
     border-color: $brand-secondary;&#13;
-    color: #fff;&#13;
+    color: $brand-primary;&#13;
   }&#13;
 &#13;
   .disabled-button {&#13;
-    background-color: #ddd;&#13;
-    border-color: #ddd;&#13;
+    background-color: #c8c8c8;&#13;
+    border-color: #c8c8c8;&#13;
     pointer-events: none;&#13;
     user-select: none;&#13;
     cursor: none;&#13;
   }&#13;
 &#13;
   .share-to-self-btn {&#13;
-    background: transparent;&#13;
+    background: #ffffff;&#13;
     border-color: #fff;&#13;
-    color: #fff;&#13;
+    color: $brand-primary;&#13;
   }&#13;
 &#13;
   .delete-btn {&#13;
     background: transparent;&#13;
     border-color: $brand-tertiary;&#13;
     color: $brand-tertiary;&#13;
+  }&#13;
+}&#13;
+&#13;
+.photobooth-modal-container {&#13;
+  padding: 12px;&#13;
+}&#13;
+&#13;
+@media screen and (max-width: 425px) {&#13;
+  .main-widget-header {&#13;
+    margin-top: 10px;&#13;
+    margin-bottom: 20px;&#13;
+&#13;
+    h1 {&#13;
+      font-size: 22px;&#13;
+    }&#13;
   }&#13;
 }&#13;
 </css>
@@ -111,42 +210,48 @@
         <public>true</public>
         <roles>public</roles>
         <script><![CDATA[(function () {
-  /* populate the 'data' object */
-  /* e.g., data.table = $sp.getValue('table'); */
-  var requestId = $sp.getParameter("sys_id");
+	/* populate the 'data' object */
+	/* e.g., data.table = $sp.getValue('table'); */
+	var requestId = $sp.getParameter("sys_id");
 
-  var grRequest = new GlideRecord("x_snc_pb_core_request");
-  grRequest.addQuery("sys_id", requestId);
-  grRequest.query();
+	var grRequest = new GlideRecord("x_snc_pb_core_request");
+	grRequest.addQuery("sys_id", requestId);
+	grRequest.query();
 
-  var requests = [];
+	var requests = [];
 
-  while (grRequest.next()) {
-    var sysId = grRequest.getUniqueValue();
-    requests.push(sysId);
-  }
+	while (grRequest.next()) {
+		var request = {};
+		var sysId = grRequest.getUniqueValue();
+		var email = grRequest.getValue("email");
+		
+		request.sysId = sysId;
+		request.email = email;
+		requests.push(request);
+	}
 
-  var images = [];
+	var images = [];
 
-  requests.forEach(function (sysId) {
-    var grSnapshot = new GlideRecord("x_snc_pb_core_snapshot");
-    grSnapshot.addQuery("request", sysId);
-    grSnapshot.query();
+	requests.forEach(function (req) {
+		var grSnapshot = new GlideRecord("x_snc_pb_core_snapshot");
+		grSnapshot.addQuery("request", req.sysId);
+		grSnapshot.query();
 
-    while (grSnapshot.next()) {
-      var snapshot = {};
+		while (grSnapshot.next()) {
+			var snapshot = {};
 
-      var snapshotId = grSnapshot.getUniqueValue();
-      snapshot.snapshotId = sysId;
-      snapshot.imageUrl = "api/x_snc_pb_core/photobooth/snapshot/" + snapshotId;
-      snapshot.type = grSnapshot.getValue("snapshot_type");
+			var snapshotId = grSnapshot.getUniqueValue();
+			snapshot.snapshotId = snapshotId;
+			snapshot.imageUrl = "api/x_snc_pb_core/photobooth/snapshot/" + snapshotId;
+			snapshot.type = grSnapshot.getValue("snapshot_type");
 
-      images.push(snapshot);
-    }
-  });
+			images.push(snapshot);
+		}
+	});
 
-  data.images = images;
-  data.currentImage = images[0];
+	data.images = images;
+	data.requests = requests;
+	data.currentImage = images[0];
 })();
 ]]></script>
         <servicenow>false</servicenow>
@@ -154,31 +259,34 @@
         <sys_created_by>alex.russian</sys_created_by>
         <sys_created_on>2023-03-22 21:23:40</sys_created_on>
         <sys_id>e725d87087f9e910fb8dfd57dabb3520</sys_id>
-        <sys_mod_count>97</sys_mod_count>
+        <sys_mod_count>147</sys_mod_count>
         <sys_name>K23 Portal Main Widget</sys_name>
         <sys_package display_value="Photobooth Public Portal" source="x_snc_pb_public">4af2f1c78761a51089790fe5dabb3505</sys_package>
         <sys_policy/>
         <sys_scope display_value="Photobooth Public Portal">4af2f1c78761a51089790fe5dabb3505</sys_scope>
         <sys_update_name>sp_widget_e725d87087f9e910fb8dfd57dabb3520</sys_update_name>
         <sys_updated_by>alex.russian</sys_updated_by>
-        <sys_updated_on>2023-04-05 22:40:20</sys_updated_on>
+        <sys_updated_on>2023-04-13 20:14:04</sys_updated_on>
         <template><![CDATA[<div class="main-widget-container">
   <div class="main-widget-header">
     <h1>Knowledge '23 Photobooth</h1>
   </div>
   <div class="main-content">
     <div class="photobox-container">
+      <div class="photobox-images-container">
+        <div class="photobox-image">
+          <img src="{{ c.data.images[c.currentImageIndex].imageUrl }}" />
+        </div>
+      </div>
+    </div>
+    <div class="arrows-container">
       <div class="left-arrow-container">
         <img
           src="x_snc_pb_public.sn-left-arrow-white.svg"
           ng-click="previousImageClick()"
         />
       </div>
-      <div class="photobox-images-container">
-        <div class="photobox-image">
-          <img src="{{ c.data.images[c.currentImageIndex].imageUrl }}" />
-        </div>
-      </div>
+      <div class="photo-number-label">Photo {{ c.currentImageIndex + 1 }}</div>
       <div class="right-arrow-container">
         <img
           src="x_snc_pb_public.sn-right-arrow-white.svg"
@@ -190,11 +298,19 @@
       <button
         class="k23-btn share-to-now-btn"
         ng-class="{'disabled-button': c.data.images[c.currentImageIndex].type == 'main'}"
+        ng-click="openShareToMural()"
       >
-        share to NOW mural
+        <img src="x_snc_pb_public.share-icon.svg" />
+        <span> Share to Now Mural </span>
       </button>
-      <button class="k23-btn share-to-self-btn">send to email/phone</button>
-      <button class="k23-btn delete-btn">delete</button>
+      <button class="k23-btn share-to-self-btn" ng-click="openShareToEmail()">
+        <img src="x_snc_pb_public.share-icon.svg" />
+        <span> Send to Email </span>
+      </button>
+      <button class="k23-btn delete-btn">
+        <img src="x_snc_pb_public.trash-can-icon.svg" />
+        <span> Delete </span>
+      </button>
     </div>
   </div>
 </div>

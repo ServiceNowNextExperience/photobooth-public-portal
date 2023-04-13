@@ -7,6 +7,8 @@
 };]]></client_script>
         <controller_as>c</controller_as>
         <css>.navbar-inverse {&#13;
+  display: flex;&#13;
+  justify-content: center;&#13;
  	img {&#13;
       width: 175px;&#13;
       height: auto;&#13;
@@ -38,14 +40,14 @@
         <sys_created_by>alex.russian</sys_created_by>
         <sys_created_on>2023-03-24 00:16:34</sys_created_on>
         <sys_id>f066468987fd2d10fb8dfd57dabb3513</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>K23 Header</sys_name>
         <sys_package display_value="Photobooth Public Portal" source="x_snc_pb_public">4af2f1c78761a51089790fe5dabb3505</sys_package>
         <sys_policy/>
         <sys_scope display_value="Photobooth Public Portal">4af2f1c78761a51089790fe5dabb3505</sys_scope>
         <sys_update_name>sp_header_footer_f066468987fd2d10fb8dfd57dabb3513</sys_update_name>
         <sys_updated_by>alex.russian</sys_updated_by>
-        <sys_updated_on>2023-03-24 00:24:44</sys_updated_on>
+        <sys_updated_on>2023-04-13 18:44:00</sys_updated_on>
         <template><![CDATA[<div>
   <nav class="navbar-inverse" role="navigation" aria-label="${Primary}">
     <a ng-if="::portal.logo" aria-label="{{::logoText}}">

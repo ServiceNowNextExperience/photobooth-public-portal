@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="db_image">
+    <db_image action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category/>
+        <format/>
+        <height/>
+        <image>894e09fb8746e510fb8dfd57dabb356a</image>
+        <name>x_snc_pb_public.close-icon.svg</name>
+        <size_bytes>1270</size_bytes>
+        <sys_class_name>db_image</sys_class_name>
+        <sys_created_by>alex.russian</sys_created_by>
+        <sys_created_on>2023-04-13 19:30:00</sys_created_on>
+        <sys_id>b93e0dfb8746e510fb8dfd57dabb35bb</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>x_snc_pb_public.close-icon.svg</sys_name>
+        <sys_package display_value="Photobooth Public Portal" source="x_snc_pb_public">4af2f1c78761a51089790fe5dabb3505</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Photobooth Public Portal">4af2f1c78761a51089790fe5dabb3505</sys_scope>
+        <sys_update_name>db_image_b93e0dfb8746e510fb8dfd57dabb35bb</sys_update_name>
+        <sys_updated_by>alex.russian</sys_updated_by>
+        <sys_updated_on>2023-04-13 19:30:08</sys_updated_on>
+        <thumbnail/>
+        <width/>
+    </db_image>
+    <sys_attachment action="INSERT_OR_UPDATE">
+        <average_image_color/>
+        <chunk_size_bytes>700000</chunk_size_bytes>
+        <compressed>true</compressed>
+        <content_type>image/svg+xml</content_type>
+        <file_name>image</file_name>
+        <hash>009691659dca2343f7ece13e405c444fa1f7a4e1ee2424c9744c9eee55165a3c</hash>
+        <image_height/>
+        <image_width/>
+        <size_bytes>1270</size_bytes>
+        <size_compressed>577</size_compressed>
+        <state>available</state>
+        <sys_created_by>alex.russian</sys_created_by>
+        <sys_created_on>2023-04-13 19:30:07</sys_created_on>
+        <sys_id>894e09fb8746e510fb8dfd57dabb356a</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2023-04-13 19:30:08</sys_updated_on>
+        <table_name>ZZ_YYdb_image</table_name>
+        <table_sys_id>b93e0dfb8746e510fb8dfd57dabb35bb</table_sys_id>
+    </sys_attachment>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>H4sIAAAAAAAAAA==</data>
+        <length>16</length>
+        <position>0</position>
+        <sys_attachment display_value="image" sys_id="894e09fb8746e510fb8dfd57dabb356a">894e09fb8746e510fb8dfd57dabb356a</sys_attachment>
+        <sys_created_by>alex.russian</sys_created_by>
+        <sys_created_on>2023-04-13 19:30:07</sys_created_on>
+        <sys_id>c94e09fb8746e510fb8dfd57dabb356a</sys_id>
+    </sys_attachment_doc>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>dVTJbhsxDL3nK4TJpT1Uo4XagjhAO1cX6LmXIIgn9gCObdjTTD6/JLXYPRQGxnoSxcdHUny8fGzFMm3m3arz0IndOG13c15/TOPy4/i56pRQwoOgvbdpv191h+Nh7MTn+/5wWXW7eT499P2yLHKx8nje9kYp1aPj7unucSte99Pp2+mFGP6c91/uCatnnZ7NVzKgE7FZdT8tSG2ENWtIUnmhA34HXFvjhPYyBOcFQvDJELYpFWwsYaU1WYNzaO6kNwbo2KSoCRun2VwZi9dBpuDjAFEGiEA4KJ0EYhuCJ+wAnIAgU0wMcX9A6JWCjFWkY2SxhH1Aay8THyZYI4lJMsY1y8ibQ1VR7KuI6o5FqCtdVmFbNFVFjTarCE1N27/a1XucjezX12Td0NYwSlQ1SFJD4a9ZCpUmb7JQpkspUBZUiPl+jJazAjZjbRiDcT7zecZe5SRDCppwVCZeMSspS6lTMKJdxfqkrCS7jtIF4FAyNdbT+VxPDi3KZHSpCVffU1aNwUajzgLF2fIKW4x6J0XMpq/LgTMTbo8wNfjfrnJt2S0VnBt4nbsgc3GD3HCx9BsuiI2LpYXbo3+58qMobrGtlbJNHtloHZp8wjGElh5+JTa09CF2yqSW3ise2rIUpV0tRWuuS1EbdSl6C600RQnb85soD/x3HSP33wf6dT2OgX6Ln834dsE/mhC/aCxMOBeu44KmxXl8nf83r7LTZTfNY3ZZ/dC6uKax9HT3Fx+uxr32BAAA</data>
+        <length>756</length>
+        <position>1</position>
+        <sys_attachment display_value="image" sys_id="894e09fb8746e510fb8dfd57dabb356a">894e09fb8746e510fb8dfd57dabb356a</sys_attachment>
+        <sys_created_by>alex.russian</sys_created_by>
+        <sys_created_on>2023-04-13 19:30:07</sys_created_on>
+        <sys_id>4d4e09fb8746e510fb8dfd57dabb356a</sys_id>
+    </sys_attachment_doc>
+</record_update>

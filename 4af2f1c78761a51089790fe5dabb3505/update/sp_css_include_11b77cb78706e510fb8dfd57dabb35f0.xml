@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_css_include">
+    <sp_css_include action="INSERT_OR_UPDATE">
+        <name>Gilroy.css</name>
+        <source>local</source>
+        <sp_css display_value="Gilroy.css">35973cb78706e510fb8dfd57dabb3534</sp_css>
+        <sys_class_name>sp_css_include</sys_class_name>
+        <sys_created_by>alex.russian</sys_created_by>
+        <sys_created_on>2023-04-13 17:51:34</sys_created_on>
+        <sys_id>11b77cb78706e510fb8dfd57dabb35f0</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Gilroy.css</sys_name>
+        <sys_package display_value="Photobooth Public Portal" source="x_snc_pb_public">4af2f1c78761a51089790fe5dabb3505</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Photobooth Public Portal">4af2f1c78761a51089790fe5dabb3505</sys_scope>
+        <sys_update_name>sp_css_include_11b77cb78706e510fb8dfd57dabb35f0</sys_update_name>
+        <sys_updated_by>alex.russian</sys_updated_by>
+        <sys_updated_on>2023-04-13 17:51:57</sys_updated_on>
+        <url/>
+    </sp_css_include>
+</record_update>

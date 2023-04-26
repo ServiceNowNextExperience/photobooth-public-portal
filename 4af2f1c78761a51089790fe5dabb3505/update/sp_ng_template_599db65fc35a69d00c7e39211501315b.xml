@@ -1,29 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sp_ng_template">
     <sp_ng_template action="INSERT_OR_UPDATE">
-        <id>shareToEmail</id>
+        <id>deleteSnapshot</id>
         <sp_widget display_value="K23 Portal Main Widget">e725d87087f9e910fb8dfd57dabb3520</sp_widget>
         <sys_class_name>sp_ng_template</sys_class_name>
-        <sys_created_by>alex.russian</sys_created_by>
-        <sys_created_on>2023-04-06 14:39:28</sys_created_on>
-        <sys_id>ce8800218786a110fb8dfd57dabb359e</sys_id>
-        <sys_mod_count>36</sys_mod_count>
-        <sys_name>shareToEmail</sys_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-04-25 00:35:18</sys_created_on>
+        <sys_id>599db65fc35a69d00c7e39211501315b</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>deleteSnapshot</sys_name>
         <sys_package display_value="Photobooth Public Portal" source="x_snc_pb_public">4af2f1c78761a51089790fe5dabb3505</sys_package>
         <sys_policy/>
         <sys_scope display_value="Photobooth Public Portal">4af2f1c78761a51089790fe5dabb3505</sys_scope>
-        <sys_update_name>sp_ng_template_ce8800218786a110fb8dfd57dabb359e</sys_update_name>
+        <sys_update_name>sp_ng_template_599db65fc35a69d00c7e39211501315b</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-04-25 00:33:43</sys_updated_on>
+        <sys_updated_on>2023-04-25 00:48:29</sys_updated_on>
         <template><![CDATA[<div class="photobooth-modal-container">
   <div class="k23-modal-header-container">
-    <h4 class="k23-modal-header">Share to Email</h4>
+    <h4 class="k23-modal-header">Delete Photo</h4>
     <div ng-click="closeEmailShareModal()">
       <img class="k23-modal-close-icon" src="x_snc_pb_public.close-icon.svg"/>
     </div>
   </div>
-  <input class="k23-email-modal-input" type="email" class="form-control" id="shareToEmailInput" ng-model="c.shareEmail">
-  <div class="send-btn-container">
-    <button class="k23-email-modal-btn" ng-click="sendPhotoToEmail()"> <img class="email-send-icon" src="x_snc_pb_public.send-icon.svg"/> <span>Send</span></button>
+  <div class="k23-modal-delete-body">
+    <h5 class="k23-modal-delete-text">Are you sure you want to delete this photo? This action cannot be undone.</h3>
+    <div class="delete-btn-container">
+      <button class="k23-delete-snapshot-modal-btn cancel-delete" ng-click="cancelDeleteSnapshot()">No</button>
+      <button class="k23-delete-snapshot-modal-btn confirm-delete" ng-click="confirmDeleteSnapshot()">Yes</button>
+    </div>
   </div>
   <style>
     .photobooth-modal-container {
@@ -48,6 +51,13 @@
       height: auto;
     }
 
+    .k23-modal-delete-text {
+      font-size: 16px;
+      color: #000;
+      margin: 0;
+      margin-bottom: 14px;
+    }
+
     .k23-modal-header {
       color: #000;
       font-size: 20px;
@@ -55,9 +65,8 @@
       padding: 0;
     }
 
-    .k23-email-modal-btn {
+    .k23-delete-snapshot-modal-btn {
       margin-top: 14px;
-      background-color: transparent;
       border-style: solid;
       font-size: 1.4rem;
       border-width: 2px;
@@ -68,20 +77,24 @@
       align-items: center;
       border-radius: 8px;
       border-color: #032D42;
-      background-color: #032D42;
       color: #fff;
       width: 126px;
       height: 49px;
     }
 
-    .send-btn-container {
-      display: flex;
-      justify-content: flex-end;
+    .cancel-delete {
+      background-color: transparent;
+      color: #032D42;
     }
 
-    .email-send-icon {
-      width: 14px;
-      height: auto;
+    .confirm-delete {
+      background-color: #032D42;
+    }
+
+    .delete-btn-container {
+      display: flex;
+      justify-content: flex-end;
+      gap: 12px;
     }
   </style>
 </div>]]></template>

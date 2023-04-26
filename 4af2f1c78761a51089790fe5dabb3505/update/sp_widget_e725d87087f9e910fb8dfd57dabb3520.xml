@@ -6,63 +6,95 @@
     var c = this;
     c.currentImageIndex = 0;
     c.shareEmail = c.data.requests[0].email || "";
+	
+	c.isMuralButtonDisabled = function() {
+		if (c.data.images[c.currentImageIndex].type == 'main')
+			return true;
+		if (c.data.images[c.currentImageIndex].state == 'Shared')
+			return true;
 
-    console.log(c.data.images);
+		return false;
+	};
 
     $scope.openShareToEmail = function() {
         c.shareToEmailModal = $uibModal.open({
-            templateUrl: "emailShare",
+            templateUrl: "shareToEmail",
             scope: $scope,
         });
     };
 
     $scope.openShareToMural = function() {
-        c.shareToEmailModal = $uibModal.open({
+        c.shareToMuralModal = $uibModal.open({
             templateUrl: "shareToMural",
             scope: $scope,
         });
     };
+	
+    $scope.openDeleteSnapshot = function() {
+        c.deleteSnapshotModal = $uibModal.open({
+            templateUrl: "deleteSnapshot",
+            scope: $scope,
+        });
+    };
+	
+	$scope.cancelDeleteSnapshot = function() {
+		$scope.closeDeleteSnapshotModal();
+	};
+	
+	$scope.closeDeleteSnapshotModal = function() {
+		c.deleteSnapshotModal.close();
+	};
+	
+	$scope.confirmDeleteSnapshot = function() {
+		console.log("delete snapshot");
+		
+		var payload = {};
+		payload.action = "delete-snapshot";
+		payload.sysId = c.data.images[c.currentImageIndex].snapshotId;
+		c.server.get(payload);
+		
+		$scope.closeDeleteSnapshotModal();
+	};
 
     $scope.sendPhotoToEmail = function() {
         console.log("send photo to email");
-
-
-        function updateSnapshot(snapshot) {
-            var sysId = snapshot.sysId;
-            var state = snapshot.state;
-            var integrations = snapshot.integrations;
-            var body = {
-                state: state,
-                integrations: integrations
-            };
-            return fetch('/api/x_snc_pb_core/photobooth/snapshot/' + sysId, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(body)
-            }).then(function(response) {
-                console.log('OK!');
-            }).catch(function(error) {
-                console.log('Error: ' + error);
-            });
-        }
-
-        // Example call here:
-        updateSnapshot({
-            sysId: '35233076470e2d10552caf52736d4399',
-            state: 'Sharing',
-            integrations: 'jon.lind@gmail.com\nK23 Mural Board'
-        });
-
-
+		
+		var payload = {};
+		payload.action = "send-to-email";
+		payload.email = c.shareEmail;
+		payload.sysId = c.data.images[c.currentImageIndex].snapshotId;
+		c.server.get(payload);
 
         $scope.closeEmailShareModal();
     };
+	
+	$scope.sendPhotoToMural = function() {
+		console.log("send photo to mural");
+		
+		var currentSnapshot = c.data.images[c.currentImageIndex];
+		currentSnapshot.state = "Shared";
+		
+		var payload = {};
+		payload.action = "send-to-mural";
+		payload.sysId = currentSnapshot.snapshotId;
+		c.server.get(payload).then(function(response) {
+			console.log(response);
+		});
+		
+		$scope.closeShareToMuralModal();
+	};
+	
+	$scope.closeShareToMuralModal = function() {
+		c.shareToMuralModal.close();
+	};
 
     $scope.closeEmailShareModal = function() {
         c.shareToEmailModal.close();
     };
+	
+	$scope.cancelShareToMural = function() {
+		$scope.closeShareToMuralModal();
+	};
 
     $scope.previousImageClick = function() {
         var previous = c.currentImageIndex - 1;
@@ -159,8 +191,8 @@
   }&#13;
 &#13;
   .disabled-button {&#13;
-    background-color: #c8c8c8;&#13;
-    border-color: #c8c8c8;&#13;
+    background-color: #bbb;&#13;
+    border-color: #bbb;&#13;
     pointer-events: none;&#13;
     user-select: none;&#13;
     cursor: none;&#13;
@@ -209,67 +241,101 @@
         <option_schema/>
         <public>true</public>
         <roles>public</roles>
-        <script><![CDATA[(function () {
-	/* populate the 'data' object */
-	/* e.g., data.table = $sp.getValue('table'); */
-	var requestId = $sp.getParameter("sys_id");
+        <script><![CDATA[(function() {
+    /* populate the 'data' object */
+    /* e.g., data.table = $sp.getValue('table'); */
+    var requestId = $sp.getParameter("sys_id");
 
-	var grRequest = new GlideRecord("x_snc_pb_core_request");
-	grRequest.addQuery("sys_id", requestId);
-	grRequest.query();
+    var grRequest = new GlideRecord("x_snc_pb_core_request");
+    grRequest.addQuery("sys_id", requestId);
+    grRequest.query();
 
-	var requests = [];
+    var requests = [];
 
-	while (grRequest.next()) {
-		var request = {};
-		var sysId = grRequest.getUniqueValue();
-		var email = grRequest.getValue("email");
-		
-		request.sysId = sysId;
-		request.email = email;
-		requests.push(request);
-	}
+    while (grRequest.next()) {
+        var request = {};
+        var sysId = grRequest.getUniqueValue();
+        var email = grRequest.getValue("email");
+        var photobooth = {
+            displayValue: grRequest.getDisplayValue("photobooth")
+        };
 
-	var images = [];
+        request.sysId = sysId;
+        request.email = email;
+        request.photobooth = photobooth;
+        requests.push(request);
+    }
 
-	requests.forEach(function (req) {
-		var grSnapshot = new GlideRecord("x_snc_pb_core_snapshot");
-		grSnapshot.addQuery("request", req.sysId);
-		grSnapshot.query();
+    var images = [];
 
-		while (grSnapshot.next()) {
-			var snapshot = {};
+    requests.forEach(function(req) {
+        var grSnapshot = new GlideRecord("x_snc_pb_core_snapshot");
+        grSnapshot.addQuery("request", req.sysId);
+		grSnapshot.orderByDesc("snapshot_type");
+        grSnapshot.query();
 
-			var snapshotId = grSnapshot.getUniqueValue();
-			snapshot.snapshotId = snapshotId;
-			snapshot.imageUrl = "api/x_snc_pb_core/photobooth/snapshot/" + snapshotId;
-			snapshot.type = grSnapshot.getValue("snapshot_type");
+        while (grSnapshot.next()) {
+            var snapshot = {};
 
-			images.push(snapshot);
-		}
-	});
+            var snapshotId = grSnapshot.getUniqueValue();
+            snapshot.snapshotId = snapshotId;
+            snapshot.imageUrl = "api/x_snc_pb_core/photobooth/snapshot/" + snapshotId;
+            snapshot.type = grSnapshot.getValue("snapshot_type");
+            snapshot.state = grSnapshot.getValue("snapshot_state");
+			snapshot.photobooth = req.photobooth;
 
-	data.images = images;
-	data.requests = requests;
-	data.currentImage = images[0];
-})();
-]]></script>
+            images.push(snapshot);
+        }
+    });
+
+    var photoboothUtils = new x_snc_pb_public.PhotoboothSnapshotUtils();
+
+    if (input && input.action == "delete-snapshot") {
+        var payload = {};
+        var sysId = input.sysId;
+        payload.sysId = sysId;
+
+        photoboothUtils.deleteSnapshot(payload);
+    }
+
+    if (input && input.action == "send-to-email") {
+        var payload = {}
+        var sysId = input.sysId;
+        var email = input.email;
+        payload.sysId = sysId;
+        payload.email = email;
+
+		photoboothUtils.sendSnapshotToEmail(payload);
+    }
+
+    if (input && input.action == "send-to-mural") {
+        var payload = {};
+        var sysId = input.sysId;
+        payload.sysId = sysId;
+
+        photoboothUtils.sendSnapshotToMural(payload);
+    }
+
+    data.images = images;
+    data.requests = requests;
+    data.currentImage = images[0];
+})();]]></script>
         <servicenow>false</servicenow>
         <sys_class_name>sp_widget</sys_class_name>
         <sys_created_by>alex.russian</sys_created_by>
         <sys_created_on>2023-03-22 21:23:40</sys_created_on>
         <sys_id>e725d87087f9e910fb8dfd57dabb3520</sys_id>
-        <sys_mod_count>147</sys_mod_count>
+        <sys_mod_count>174</sys_mod_count>
         <sys_name>K23 Portal Main Widget</sys_name>
         <sys_package display_value="Photobooth Public Portal" source="x_snc_pb_public">4af2f1c78761a51089790fe5dabb3505</sys_package>
         <sys_policy/>
         <sys_scope display_value="Photobooth Public Portal">4af2f1c78761a51089790fe5dabb3505</sys_scope>
         <sys_update_name>sp_widget_e725d87087f9e910fb8dfd57dabb3520</sys_update_name>
-        <sys_updated_by>alex.russian</sys_updated_by>
-        <sys_updated_on>2023-04-13 20:14:04</sys_updated_on>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-04-26 18:23:08</sys_updated_on>
         <template><![CDATA[<div class="main-widget-container">
   <div class="main-widget-header">
-    <h1>Knowledge '23 Photobooth</h1>
+    <h1>{{ c.data.images[c.currentImageIndex].photobooth.displayValue }}</h1>
   </div>
   <div class="main-content">
     <div class="photobox-container">
@@ -297,17 +363,18 @@
     <div class="buttons-container">
       <button
         class="k23-btn share-to-now-btn"
-        ng-class="{'disabled-button': c.data.images[c.currentImageIndex].type == 'main'}"
+        ng-class="{'disabled-button': c.isMuralButtonDisabled() }"
         ng-click="openShareToMural()"
       >
-        <img src="x_snc_pb_public.share-icon.svg" />
-        <span> Share to Now Mural </span>
+        <img src="x_snc_pb_public.share-icon.svg" ng-if="!c.isMuralButtonDisabled()" />
+        <span ng-if="!c.isMuralButtonDisabled()"> Share to Now Mural </span>
+        <span ng-if="c.isMuralButtonDisabled()"> Shared </span>
       </button>
       <button class="k23-btn share-to-self-btn" ng-click="openShareToEmail()">
         <img src="x_snc_pb_public.share-icon.svg" />
         <span> Send to Email </span>
       </button>
-      <button class="k23-btn delete-btn">
+      <button class="k23-btn delete-btn" ng-click="openDeleteSnapshot()">
         <img src="x_snc_pb_public.trash-can-icon.svg" />
         <span> Delete </span>
       </button>

@@ -6,16 +6,97 @@
         <sys_created_by>alex.russian</sys_created_by>
         <sys_created_on>2023-04-12 21:47:57</sys_created_on>
         <sys_id>6b1428ab8706a510fb8dfd57dabb3582</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>shareToMural</sys_name>
         <sys_package display_value="Photobooth Public Portal" source="x_snc_pb_public">4af2f1c78761a51089790fe5dabb3505</sys_package>
         <sys_policy/>
         <sys_scope display_value="Photobooth Public Portal">4af2f1c78761a51089790fe5dabb3505</sys_scope>
         <sys_update_name>sp_ng_template_6b1428ab8706a510fb8dfd57dabb3582</sys_update_name>
-        <sys_updated_by>alex.russian</sys_updated_by>
-        <sys_updated_on>2023-04-12 21:47:57</sys_updated_on>
-        <template><![CDATA[<div>
-  <h4>Share to Mural</h4>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-04-25 01:50:26</sys_updated_on>
+        <template><![CDATA[<div class="photobooth-modal-container">
+  <div class="k23-modal-header-container">
+    <h4 class="k23-modal-header">Share to Mural</h4>
+    <div ng-click="closeEmailShareModal()">
+      <img class="k23-modal-close-icon" src="x_snc_pb_public.close-icon.svg"/>
+    </div>
+  </div>
+  <div class="k23-modal-delete-body">
+    <h5 class="k23-modal-delete-text">Share this snapshot to the ServiceNow Mural?</h5>
+    <div class="delete-btn-container">
+      <button class="k23-share-snapshot-modal-btn cancel-share" ng-click="cancelShareToMural()">No</button>
+      <button class="k23-share-snapshot-modal-btn confirm-share" ng-click="sendPhotoToMural()">Yes</button>
+    </div>
+  </div>
+  <style>
+    .photobooth-modal-container {
+      border-radius: 8px;
+      padding: 20px;
+      width: 375px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      background: #fff;
+    }
+
+    .k23-modal-header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+
+    .k23-modal-close-icon {
+      width: 32px;
+      height: auto;
+    }
+
+    .k23-modal-delete-text {
+      font-size: 16px;
+      color: #000;
+      margin: 0;
+      margin-bottom: 14px;
+    }
+
+    .k23-modal-header {
+      color: #000;
+      font-size: 20px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .k23-share-snapshot-modal-btn {
+      margin-top: 14px;
+      border-style: solid;
+      font-size: 1.4rem;
+      border-width: 2px;
+      border-style: solid;
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      align-items: center;
+      border-radius: 8px;
+      border-color: #032D42;
+      color: #fff;
+      width: 126px;
+      height: 49px;
+    }
+
+    .cancel-share {
+      background-color: transparent;
+      color: #032D42;
+    }
+
+    .confirm-share {
+      background-color: #032D42;
+    }
+
+    .delete-btn-container {
+      display: flex;
+      justify-content: flex-end;
+      gap: 12px;
+    }
+  </style>
 </div>]]></template>
     </sp_ng_template>
 </record_update>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_snc_pb_public.PhotoboothSnapshotUtils</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>PhotoboothSnapshotUtils</name>
+        <script><![CDATA[var PhotoboothSnapshotUtils = Class.create();
+PhotoboothSnapshotUtils.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+    type: 'PhotoboothSnapshotUtils',
+    deleteSnapshot: function(payload) {
+        try {
+            var sysId = payload.sysId;
+            var inputs = {};
+            inputs['snapshot_sys_id'] = sysId; // String 
+
+            // Start Asynchronously: Uncomment to run in background. Code snippet will not have access to outputs.
+            // sn_fd.FlowAPI.getRunner().subflow('x_snc_pb_public.delete_snapshot_record').inBackground().withInputs(inputs).run();
+
+            // Execute Synchronously: Run in foreground. Code snippet has access to outputs.
+            var result = sn_fd.FlowAPI.getRunner().subflow('x_snc_pb_public.delete_snapshot_record').inForeground().withInputs(inputs).run();
+            var outputs = result.getOutputs();
+
+            // Current subflow has no outputs defined.		
+        } catch (ex) {
+            var message = ex.getMessage();
+            gs.error(message);
+        }
+    },
+    sendSnapshotToEmail: function(payload) {
+        var sysId = payload.sysId;
+        var email = payload.email;
+        try {
+            var inputs = {};
+            inputs['snapshot_sys_id'] = sysId; // String 
+            inputs['email'] = email; // String 
+
+            // Start Asynchronously: Uncomment to run in background. Code snippet will not have access to outputs.
+            // sn_fd.FlowAPI.getRunner().subflow('x_snc_pb_out.send_to_snapshot_to_email').inBackground().withInputs(inputs).run();
+
+            // Execute Synchronously: Run in foreground. Code snippet has access to outputs.
+            var result = sn_fd.FlowAPI.getRunner().subflow('x_snc_pb_out.send_to_snapshot_to_email').inForeground().withInputs(inputs).run();
+            var outputs = result.getOutputs();
+
+            // Current subflow has no outputs defined.		
+        } catch (ex) {
+            var message = ex.getMessage();
+            gs.error(message);
+        }
+
+    },
+    sendSnapshotToMural: function(payload) {
+        try {
+            var sysId = payload.sysId;
+            var inputs = {};
+            inputs['snapshot_sys_id'] = sysId; // String 
+
+            // Start Asynchronously: Uncomment to run in background. Code snippet will not have access to outputs.
+            // sn_fd.FlowAPI.getRunner().subflow('x_snc_pb_out.share_to_k23_mural_board').inBackground().withInputs(inputs).run();
+
+            // Execute Synchronously: Run in foreground. Code snippet has access to outputs.
+            var result = sn_fd.FlowAPI.getRunner().subflow('x_snc_pb_out.share_to_k23_mural_board').inForeground().withInputs(inputs).run();
+            var outputs = result.getOutputs();
+
+            // Current subflow has no outputs defined.		
+        } catch (ex) {
+            var message = ex.getMessage();
+            gs.error(message);
+			
+			return message;
+        }
+    }
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-04-25 14:48:34</sys_created_on>
+        <sys_id>52708663c3daa9d00c7e392115013199</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>PhotoboothSnapshotUtils</sys_name>
+        <sys_package display_value="Photobooth Public Portal" source="x_snc_pb_public">4af2f1c78761a51089790fe5dabb3505</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Photobooth Public Portal">4af2f1c78761a51089790fe5dabb3505</sys_scope>
+        <sys_update_name>sys_script_include_52708663c3daa9d00c7e392115013199</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-04-26 17:40:05</sys_updated_on>
+    </sys_script_include>
+</record_update>

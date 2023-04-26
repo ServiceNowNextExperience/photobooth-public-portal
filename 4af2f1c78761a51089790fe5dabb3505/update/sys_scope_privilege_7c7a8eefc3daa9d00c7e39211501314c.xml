@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_scope_privilege">
+    <sys_scope_privilege action="INSERT_OR_UPDATE">
+        <operation>delete</operation>
+        <source_scope display_value="Photobooth Public Portal">4af2f1c78761a51089790fe5dabb3505</source_scope>
+        <status>allowed</status>
+        <sys_class_name>sys_scope_privilege</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-04-25 15:30:37</sys_created_on>
+        <sys_id>7c7a8eefc3daa9d00c7e39211501314c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_snc_pb_core_snapshot</sys_name>
+        <sys_package display_value="Photobooth Public Portal" source="x_snc_pb_public">4af2f1c78761a51089790fe5dabb3505</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Photobooth Public Portal">4af2f1c78761a51089790fe5dabb3505</sys_scope>
+        <sys_update_name>sys_scope_privilege_7c7a8eefc3daa9d00c7e39211501314c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-04-25 15:30:37</sys_updated_on>
+        <target_name>x_snc_pb_core_snapshot</target_name>
+        <target_scope display_value="Photobooth Core">299cd5a447ee1d10552caf52736d430b</target_scope>
+        <target_type>sys_db_object</target_type>
+    </sys_scope_privilege>
+</record_update>

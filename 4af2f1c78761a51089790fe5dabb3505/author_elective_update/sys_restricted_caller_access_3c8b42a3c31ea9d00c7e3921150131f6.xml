@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_restricted_caller_access">
+    <sys_restricted_caller_access action="DELETE">
+        <description/>
+        <operation>delete</operation>
+        <rca_type>requested</rca_type>
+        <source/>
+        <source_scope display_value="Photobooth Public Portal">4af2f1c78761a51089790fe5dabb3505</source_scope>
+        <source_table/>
+        <source_type>5</source_type>
+        <status>2</status>
+        <sys_class_name>sys_restricted_caller_access</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-04-25 15:36:11</sys_created_on>
+        <sys_id>3c8b42a3c31ea9d00c7e3921150131f6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>4af2f1c78761a51089790fe5dabb3505</sys_name>
+        <sys_package display_value="Photobooth Public Portal" source="x_snc_pb_public">4af2f1c78761a51089790fe5dabb3505</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Photobooth Public Portal">4af2f1c78761a51089790fe5dabb3505</sys_scope>
+        <sys_update_name>sys_restricted_caller_access_3c8b42a3c31ea9d00c7e3921150131f6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-04-25 15:36:11</sys_updated_on>
+        <target name="x_snc_pb_core_snapshot" target_table="sys_db_object">80cc1bf847269d10552caf52736d4346</target>
+        <target_scope display_value="Photobooth Core">299cd5a447ee1d10552caf52736d430b</target_scope>
+        <target_table>sys_db_object</target_table>
+        <target_type>1</target_type>
+    </sys_restricted_caller_access>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Photobooth Public Portal">4af2f1c78761a51089790fe5dabb3505</application>
+        <file_path/>
+        <instance_id>2e4e02bcdb3395d842b321c405961946</instance_id>
+        <instance_name>tokyolodemo</instance_name>
+        <name>sys_restricted_caller_access_3c8b42a3c31ea9d00c7e3921150131f6</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_restricted_caller_access"><sys_restricted_caller_access action="INSERT_OR_UPDATE"><description/><operation>delete</operation><rca_type>requested</rca_type><source/><source_scope display_value="Photobooth Public Portal">4af2f1c78761a51089790fe5dabb3505</source_scope><source_table/><source_type>5</source_type><status>2</status><sys_class_name>sys_restricted_caller_access</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2023-04-25 15:36:11</sys_created_on><sys_id>3c8b42a3c31ea9d00c7e3921150131f6</sys_id><sys_mod_count>0</sys_mod_count><sys_name>4af2f1c78761a51089790fe5dabb3505</sys_name><sys_package display_value="Photobooth Public Portal" source="x_snc_pb_public">4af2f1c78761a51089790fe5dabb3505</sys_package><sys_policy/><sys_scope display_value="Photobooth Public Portal">4af2f1c78761a51089790fe5dabb3505</sys_scope><sys_update_name>sys_restricted_caller_access_3c8b42a3c31ea9d00c7e3921150131f6</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-04-25 15:36:11</sys_updated_on><target name="x_snc_pb_core_snapshot" target_table="sys_db_object">80cc1bf847269d10552caf52736d4346</target><target_scope display_value="Photobooth Core">299cd5a447ee1d10552caf52736d430b</target_scope><target_table>sys_db_object</target_table><target_type>1</target_type></sys_restricted_caller_access></record_update>]]></payload>
+        <payload_hash>454264122</payload_hash>
+        <record_name>4af2f1c78761a51089790fe5dabb3505</record_name>
+        <reverted_from/>
+        <source>a9267613c35a69d00c7e3921150131e5</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-04-25 15:36:11</sys_created_on>
+        <sys_id>d7cb42a3c31ea9d00c7e392115013184</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>187b90edc0d0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-04-25 15:36:11</sys_updated_on>
+        <type>Restricted Caller Access Privilege</type>
+        <update_guid>dfcb42a3df1ea9d01850d9210e0bd883</update_guid>
+        <update_guid_history>dfcb42a3df1ea9d01850d9210e0bd883:454264122</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-04-25 15:36:26</sys_created_on>
+        <sys_db_object display_value="" name="sys_restricted_caller_access">sys_restricted_caller_access</sys_db_object>
+        <sys_id>0372176d88d344a286d218f069dc6279</sys_id>
+        <sys_metadata>3c8b42a3c31ea9d00c7e3921150131f6</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>4af2f1c78761a51089790fe5dabb3505</sys_name>
+        <sys_package display_value="Photobooth Public Portal" source="x_snc_pb_public">4af2f1c78761a51089790fe5dabb3505</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Photobooth Public Portal">4af2f1c78761a51089790fe5dabb3505</sys_scope>
+        <sys_scope_delete display_value="">0d51489177394c7093dca9f9e08a9fd9</sys_scope_delete>
+        <sys_update_name>sys_restricted_caller_access_3c8b42a3c31ea9d00c7e3921150131f6</sys_update_name>
+        <sys_update_version display_value="sys_restricted_caller_access_3c8b42a3c31ea9d00c7e3921150131f6">d7cb42a3c31ea9d00c7e392115013184</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-04-25 15:36:26</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

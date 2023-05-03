@@ -6,107 +6,111 @@
 	var c = this;
 
 	c.currentImageIndex = 0;
-	c.shareEmail = c.data.requests[0].email || "";
+	
+	c.isRequestValid = c.data.requests.length > 0 ? true : false;
+	
+	if (c.data.requests.length > 0) {
+		c.shareEmail = c.data.requests[0].email || "";
+	}
+		c.isMuralButtonDisabled = function() {
+			if (c.data.images[c.currentImageIndex].type == 'main')
+				return true;
+			if (c.data.images[c.currentImageIndex].state == 'Shared')
+				return true;
 
-	c.isMuralButtonDisabled = function() {
-		if (c.data.images[c.currentImageIndex].type == 'main')
-			return true;
-		if (c.data.images[c.currentImageIndex].state == 'Shared')
-			return true;
+			return false;
+		};
 
-		return false;
-	};
+		$scope.openShareToEmail = function() {
+			c.shareToEmailModal = $uibModal.open({
+				templateUrl: "shareToEmail",
+				scope: $scope,
+			});
+		};
 
-	$scope.openShareToEmail = function() {
-		c.shareToEmailModal = $uibModal.open({
-			templateUrl: "shareToEmail",
-			scope: $scope,
-		});
-	};
+		$scope.openShareToMural = function() {
+			c.shareToMuralModal = $uibModal.open({
+				templateUrl: "shareToMural",
+				scope: $scope,
+			});
+		};
 
-	$scope.openShareToMural = function() {
-		c.shareToMuralModal = $uibModal.open({
-			templateUrl: "shareToMural",
-			scope: $scope,
-		});
-	};
+		$scope.openDeleteSnapshot = function() {
+			c.deleteSnapshotModal = $uibModal.open({
+				templateUrl: "deleteSnapshot",
+				scope: $scope,
+			});
+		};
 
-	$scope.openDeleteSnapshot = function() {
-		c.deleteSnapshotModal = $uibModal.open({
-			templateUrl: "deleteSnapshot",
-			scope: $scope,
-		});
-	};
+		$scope.cancelDeleteSnapshot = function() {
+			$scope.closeDeleteSnapshotModal();
+		};
 
-	$scope.cancelDeleteSnapshot = function() {
-		$scope.closeDeleteSnapshotModal();
-	};
+		$scope.closeDeleteSnapshotModal = function() {
+			c.deleteSnapshotModal.close();
+		};
 
-	$scope.closeDeleteSnapshotModal = function() {
-		c.deleteSnapshotModal.close();
-	};
+		$scope.confirmDeleteSnapshot = function() {
+			console.log("delete snapshot");
 
-	$scope.confirmDeleteSnapshot = function() {
-		console.log("delete snapshot");
+			var payload = {};
+			payload.action = "delete-snapshot";
+			payload.sysId = c.data.images[c.currentImageIndex].snapshotId;
+			c.server.get(payload);
 
-		var payload = {};
-		payload.action = "delete-snapshot";
-		payload.sysId = c.data.images[c.currentImageIndex].snapshotId;
-		c.server.get(payload);
+			$scope.closeDeleteSnapshotModal();
+		};
 
-		$scope.closeDeleteSnapshotModal();
-	};
+		$scope.sendPhotoToEmail = function() {
+			console.log("send photo to email");
 
-	$scope.sendPhotoToEmail = function() {
-		console.log("send photo to email");
+			var payload = {};
+			payload.action = "send-to-email";
+			payload.email = c.shareEmail;
+			payload.sysId = c.data.images[c.currentImageIndex].snapshotId;
+			c.server.get(payload);
 
-		var payload = {};
-		payload.action = "send-to-email";
-		payload.email = c.shareEmail;
-		payload.sysId = c.data.images[c.currentImageIndex].snapshotId;
-		c.server.get(payload);
+			$scope.closeEmailShareModal();
+		};
 
-		$scope.closeEmailShareModal();
-	};
+		$scope.sendPhotoToMural = function() {
+			console.log("send photo to mural");
 
-	$scope.sendPhotoToMural = function() {
-		console.log("send photo to mural");
+			var currentSnapshot = c.data.images[c.currentImageIndex];
+			currentSnapshot.state = "Shared";
 
-		var currentSnapshot = c.data.images[c.currentImageIndex];
-		currentSnapshot.state = "Shared";
+			var payload = {};
+			payload.action = "send-to-mural";
+			payload.sysId = currentSnapshot.snapshotId;
+			c.server.get(payload).then(function(response) {
+				console.log(response);
+			});
 
-		var payload = {};
-		payload.action = "send-to-mural";
-		payload.sysId = currentSnapshot.snapshotId;
-		c.server.get(payload).then(function(response) {
-			console.log(response);
-		});
+			$scope.closeShareToMuralModal();
+		};
 
-		$scope.closeShareToMuralModal();
-	};
+		$scope.closeShareToMuralModal = function() {
+			c.shareToMuralModal.close();
+		};
 
-	$scope.closeShareToMuralModal = function() {
-		c.shareToMuralModal.close();
-	};
+		$scope.closeEmailShareModal = function() {
+			c.shareToEmailModal.close();
+		};
 
-	$scope.closeEmailShareModal = function() {
-		c.shareToEmailModal.close();
-	};
+		$scope.cancelShareToMural = function() {
+			$scope.closeShareToMuralModal();
+		};
 
-	$scope.cancelShareToMural = function() {
-		$scope.closeShareToMuralModal();
-	};
+		$scope.previousImageClick = function() {
+			var previous = c.currentImageIndex - 1;
+			c.currentImageIndex = previous < 0 ? c.data.images.length - 1 : previous;
+		};
 
-	$scope.previousImageClick = function() {
-		var previous = c.currentImageIndex - 1;
-		c.currentImageIndex = previous < 0 ? c.data.images.length - 1 : previous;
-	};
-
-	$scope.nextImageClick = function() {
-		var next = c.currentImageIndex + 1;
-		c.currentImageIndex = next === c.data.images.length ? 0 : next;
-	};
-};]]></client_script>
+		$scope.nextImageClick = function() {
+			var next = c.currentImageIndex + 1;
+			c.currentImageIndex = next === c.data.images.length ? 0 : next;
+		};
+	};]]></client_script>
         <controller_as>c</controller_as>
         <css>.main-widget-container {&#13;
   display: flex;&#13;
@@ -115,6 +119,16 @@
   align-items: center;&#13;
   max-width: 400px;&#13;
   margin: 0 auto;&#13;
+  &#13;
+  .invalid-request-container {&#13;
+  	max-width: 350px;&#13;
+  }&#13;
+  &#13;
+  .invalid-request-header {&#13;
+   	color: #fff;&#13;
+    font-size: 20px;&#13;
+    text-align: center;&#13;
+  }&#13;
 &#13;
   .main-widget-header {&#13;
     margin-top: 10px;&#13;
@@ -239,7 +253,7 @@
   
 }]]></link>
         <name>K23 Portal Main Widget</name>
-        <option_schema>[{"name":"show_share_mural_button","section":"Behavior","default_value":"true","label":"Show \"Share to Mural\" button","type":"boolean"}]</option_schema>
+        <option_schema>[{"name":"show_share_mural_button","section":"Behavior","default_value":"true","label":"Show \"Share to Mural\" button","type":"boolean"},{"name":"invalid_url_text","section":"Data","default_value":"Oops! Looks like you have an invalid URL. Please double-check the link you received.","label":"Invalid url text","type":"string"}]</option_schema>
         <public>true</public>
         <roles>public</roles>
         <script><![CDATA[(function() {
@@ -326,63 +340,69 @@
         <sys_created_by>alex.russian</sys_created_by>
         <sys_created_on>2023-03-22 21:23:40</sys_created_on>
         <sys_id>e725d87087f9e910fb8dfd57dabb3520</sys_id>
-        <sys_mod_count>201</sys_mod_count>
+        <sys_mod_count>209</sys_mod_count>
         <sys_name>K23 Portal Main Widget</sys_name>
         <sys_package display_value="Photobooth Public Portal" source="x_snc_pb_public">4af2f1c78761a51089790fe5dabb3505</sys_package>
         <sys_policy/>
         <sys_scope display_value="Photobooth Public Portal">4af2f1c78761a51089790fe5dabb3505</sys_scope>
         <sys_update_name>sp_widget_e725d87087f9e910fb8dfd57dabb3520</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-05-03 18:11:16</sys_updated_on>
+        <sys_updated_on>2023-05-03 18:32:31</sys_updated_on>
         <template><![CDATA[<div class="main-widget-container">
-  <div class="main-widget-header">
-    <h1>{{ c.data.images[c.currentImageIndex].photobooth.displayValue }}</h1>
+  <div class="invalid-request-container" ng-if="!c.isRequestValid">
+    <h1 class="invalid-request-header">
+			{{ c.options.invalid_url_text }}
+    </h1>
   </div>
-  <div class="main-content">
-    <div class="photobox-container">
-      <div class="photobox-images-container">
-        <div class="photobox-image">
-          <img src="{{ c.data.images[c.currentImageIndex].imageUrl }}" />
+  <div class="main-widget-content-container" ng-if="c.isRequestValid">
+    <div class="main-widget-header">
+      <h1>{{ c.data.images[c.currentImageIndex].photobooth.displayValue }}</h1>
+    </div>
+    <div class="main-content">
+      <div class="photobox-container">
+        <div class="photobox-images-container">
+          <div class="photobox-image">
+            <img src="{{ c.data.images[c.currentImageIndex].imageUrl }}" />
+          </div>
         </div>
       </div>
-    </div>
-    <div class="arrows-container">
-      <div class="left-arrow-container">
-        <img
-             src="x_snc_pb_public.sn-left-arrow-white.svg"
-             ng-click="previousImageClick()"
-             />
+      <div class="arrows-container">
+        <div class="left-arrow-container">
+          <img
+               src="x_snc_pb_public.sn-left-arrow-white.svg"
+               ng-click="previousImageClick()"
+               />
+        </div>
+        <div class="photo-number-label">Photo {{ c.currentImageIndex + 1 }}</div>
+        <div class="right-arrow-container">
+          <img
+               src="x_snc_pb_public.sn-right-arrow-white.svg"
+               ng-click="nextImageClick()"
+               />
+        </div>
       </div>
-      <div class="photo-number-label">Photo {{ c.currentImageIndex + 1 }}</div>
-      <div class="right-arrow-container">
-        <img
-             src="x_snc_pb_public.sn-right-arrow-white.svg"
-             ng-click="nextImageClick()"
-             />
+      <div class="buttons-container">
+        <button
+                ng-if="c.options.show_share_mural_button == 'true'"
+                class="k23-btn share-to-now-btn"
+                ng-class="{'disabled-button': c.isMuralButtonDisabled() }"
+                ng-click="openShareToMural()"
+                >
+          <img src="x_snc_pb_public.share-icon.svg" ng-if="!c.isMuralButtonDisabled()" />
+          <span ng-if="!c.isMuralButtonDisabled()"> Share to Now Mural </span>
+          <span ng-if="c.isMuralButtonDisabled()"> Shared </span>
+        </button>
+        <button class="k23-btn share-to-self-btn" ng-click="openShareToEmail()">
+          <img src="x_snc_pb_public.share-icon.svg" />
+          <span> Send to Email </span>
+        </button>
+        <button class="k23-btn delete-btn" ng-click="openDeleteSnapshot()">
+          <img src="x_snc_pb_public.trash-can-icon.svg" />
+          <span> Delete </span>
+        </button>
       </div>
-    </div>
-    <div class="buttons-container">
-      <button
-              ng-if="c.options.show_share_mural_button == 'true'"
-              class="k23-btn share-to-now-btn"
-              ng-class="{'disabled-button': c.isMuralButtonDisabled() }"
-              ng-click="openShareToMural()"
-              >
-        <img src="x_snc_pb_public.share-icon.svg" ng-if="!c.isMuralButtonDisabled()" />
-        <span ng-if="!c.isMuralButtonDisabled()"> Share to Now Mural </span>
-        <span ng-if="c.isMuralButtonDisabled()"> Shared </span>
-      </button>
-      <button class="k23-btn share-to-self-btn" ng-click="openShareToEmail()">
-        <img src="x_snc_pb_public.share-icon.svg" />
-        <span> Send to Email </span>
-      </button>
-      <button class="k23-btn delete-btn" ng-click="openDeleteSnapshot()">
-        <img src="x_snc_pb_public.trash-can-icon.svg" />
-        <span> Delete </span>
-      </button>
     </div>
   </div>
-</div>
-]]></template>
+</div>]]></template>
     </sp_widget>
 </record_update>

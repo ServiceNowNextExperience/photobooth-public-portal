@@ -20,7 +20,7 @@ PhotoboothSnapshotUtils.prototype = Object.extendsObject(global.AbstractAjaxProc
             // sn_fd.FlowAPI.getRunner().subflow('x_snc_pb_public.delete_snapshot_record').inBackground().withInputs(inputs).run();
 
             // Execute Synchronously: Run in foreground. Code snippet has access to outputs.
-            var result = sn_fd.FlowAPI.getRunner().subflow('x_snc_pb_public.delete_snapshot_record').inForeground().withInputs(inputs).run();
+            var result = sn_fd.FlowAPI.getRunner().subflow('x_snc_pb_core.delete_photobooth_snapshot').inForeground().withInputs(inputs).run();
             var outputs = result.getOutputs();
 
             // Current subflow has no outputs defined.		
@@ -51,11 +51,9 @@ PhotoboothSnapshotUtils.prototype = Object.extendsObject(global.AbstractAjaxProc
         }
 
     },
-    sendSnapshotToMural: function(payload) {
+    sendSnapshotToMural: function({sysId}) {
         try {
-            var sysId = payload.sysId;
-            var inputs = {};
-            inputs['snapshot_sys_id'] = sysId; // String 
+            var inputs = {snapshot_sys_id : sysId};
 
             // Start Asynchronously: Uncomment to run in background. Code snippet will not have access to outputs.
             // sn_fd.FlowAPI.getRunner().subflow('x_snc_pb_out.share_to_k23_mural_board').inBackground().withInputs(inputs).run();
@@ -77,13 +75,13 @@ PhotoboothSnapshotUtils.prototype = Object.extendsObject(global.AbstractAjaxProc
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-04-25 14:48:34</sys_created_on>
         <sys_id>52708663c3daa9d00c7e392115013199</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name>PhotoboothSnapshotUtils</sys_name>
         <sys_package display_value="Photobooth Public Portal" source="x_snc_pb_public">4af2f1c78761a51089790fe5dabb3505</sys_package>
         <sys_policy/>
         <sys_scope display_value="Photobooth Public Portal">4af2f1c78761a51089790fe5dabb3505</sys_scope>
         <sys_update_name>sys_script_include_52708663c3daa9d00c7e392115013199</sys_update_name>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-04-26 17:40:05</sys_updated_on>
+        <sys_updated_by>jon.lind</sys_updated_by>
+        <sys_updated_on>2023-05-04 21:34:02</sys_updated_on>
     </sys_script_include>
 </record_update>

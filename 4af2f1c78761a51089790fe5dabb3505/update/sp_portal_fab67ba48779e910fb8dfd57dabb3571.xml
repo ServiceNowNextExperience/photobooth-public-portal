@@ -25,7 +25,7 @@ $text-muted:#979797;
         <enable_ais>false</enable_ais>
         <enable_favorites>false</enable_favorites>
         <hide_portal_name>false</hide_portal_name>
-        <homepage display_value="photobooth_home">6be3183087f9e910fb8dfd57dabb3530</homepage>
+        <homepage display_value="home">6be3183087f9e910fb8dfd57dabb3530</homepage>
         <icon/>
         <kb_knowledge_base/>
         <kb_knowledge_page/>
@@ -44,18 +44,18 @@ $text-muted:#979797;
         <sys_created_by>alex.russian</sys_created_by>
         <sys_created_on>2023-03-22 19:10:29</sys_created_on>
         <sys_id>fab67ba48779e910fb8dfd57dabb3571</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name>K23 Photobooth Portal</sys_name>
         <sys_package display_value="Photobooth Public Portal" source="x_snc_pb_public">4af2f1c78761a51089790fe5dabb3505</sys_package>
         <sys_policy/>
         <sys_scope display_value="Photobooth Public Portal">4af2f1c78761a51089790fe5dabb3505</sys_scope>
         <sys_update_name>sp_portal_fab67ba48779e910fb8dfd57dabb3571</sys_update_name>
-        <sys_updated_by>alex.russian</sys_updated_by>
-        <sys_updated_on>2023-03-24 00:09:07</sys_updated_on>
+        <sys_updated_by>jon.lind</sys_updated_by>
+        <sys_updated_on>2023-05-02 22:06:40</sys_updated_on>
         <theme display_value="K23 Photobooth Portal">1ac594b087f9e910fb8dfd57dabb35f4</theme>
         <title>K23 Photobooth Portal</title>
         <ts_index_group/>
-        <url_suffix>k23_photobooth</url_suffix>
+        <url_suffix>pb</url_suffix>
     </sp_portal>
     <sys_translated_text action="delete_multiple" query="documentkey=fab67ba48779e910fb8dfd57dabb3571"/>
     <sys_attachment action="INSERT_OR_UPDATE">
@@ -63,6 +63,7 @@ $text-muted:#979797;
         <chunk_size_bytes>700000</chunk_size_bytes>
         <compressed>true</compressed>
         <content_type>image/png</content_type>
+        <encryption_context/>
         <file_name>logo</file_name>
         <hash>bb78e53f58d5ba24ff7c2005150210acbf988f3e8e1d5af9bb092530dfa805c1</hash>
         <image_height>303</image_height>

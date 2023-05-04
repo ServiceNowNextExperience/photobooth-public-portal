@@ -8,7 +8,7 @@
         <container_class_name/>
         <name>Photobooth Home - Container 1</name>
         <order>1</order>
-        <sp_page display_value="photobooth_home">6be3183087f9e910fb8dfd57dabb3530</sp_page>
+        <sp_page display_value="home">6be3183087f9e910fb8dfd57dabb3530</sp_page>
         <subheader>false</subheader>
         <sys_class_name>sp_container</sys_class_name>
         <sys_created_by>alex.russian</sys_created_by>

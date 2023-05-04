@@ -1,0 +1,1328 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="DELETE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <internal_name>delete_snapshot_record</internal_name>
+        <label_cache>[{"name":"c64cfc6f-ab28-44df-89c9-0b0ff6e4f10a.Record","label":"1 - Look Up Record➛Photobooth Snapshot Record","reference":"x_snc_pb_core_snapshot","reference_display":"Photobooth Snapshot","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"subflow.snapshot_sys_id","label":"Input➛Snapshot Sys Id","type":"string","base_type":"string","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"04fc1195-b33e-4d1b-ac43-c03bf17dd4f1"}}]</label_cache>
+        <master_snapshot>2d71c3d3c39a69d00c7e3921150131df</master_snapshot>
+        <name>Delete Snapshot Record</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-04-25 00:50:12</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>7c014f13c39a69d00c7e392115013121</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Delete Snapshot Record</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Photobooth Public Portal" source="x_snc_pb_public">4af2f1c78761a51089790fe5dabb3505</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Photobooth Public Portal">4af2f1c78761a51089790fe5dabb3505</sys_scope>
+        <sys_update_name>sys_hub_flow_7c014f13c39a69d00c7e392115013121</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-04-25 00:52:10</sys_updated_on>
+        <type>subflow</type>
+    </sys_hub_flow>
+    <sys_translated_text action="DELETE" query="documentkey=7c014f13c39a69d00c7e392115013121"/>
+    <sys_variable_value action="DELETE" query="document_key=7c014f13c39a69d00c7e392115013121"/>
+    <sys_hub_trigger_instance action="DELETE" query="flow=7c014f13c39a69d00c7e392115013121"/>
+    <sys_hub_flow_stage action="DELETE" query="flow=7c014f13c39a69d00c7e392115013121"/>
+    <sys_flow_cat_variable_model action="DELETE" query="id=7c014f13c39a69d00c7e392115013121^sys_idNOT INf8014f13c39a69d00c7e392115013122"/>
+    <sys_flow_cat_variable_model action="DELETE">
+        <id>7c014f13c39a69d00c7e392115013121</id>
+        <name>Delete Snapshot Record</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-04-25 00:50:12</sys_created_on>
+        <sys_id>f8014f13c39a69d00c7e392115013122</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-04-25 00:50:12</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="DELETE" query="flow_catalog_model=f8014f13c39a69d00c7e392115013122"/>
+    <sys_hub_flow_input action="DELETE" query="model=7c014f13c39a69d00c7e392115013121^sys_idNOT IN296143d3c39a69d00c7e3921150131a8"/>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=04fc1195-b33e-4d1b-ac43-c03bf17dd4f1</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>snapshot_sys_id</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Snapshot Sys Id</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Delete Snapshot Record">7c014f13c39a69d00c7e392115013121</model>
+        <model_id>7c014f13c39a69d00c7e392115013121</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_7c014f13c39a69d00c7e392115013121</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-04-25 00:51:53</sys_created_on>
+        <sys_id>296143d3c39a69d00c7e3921150131a8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Photobooth Public Portal">4af2f1c78761a51089790fe5dabb3505</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-04-25 00:51:53</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_output action="DELETE" query="model=7c014f13c39a69d00c7e392115013121"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=7c014f13c39a69d00c7e392115013121"/>
+    <sys_hub_action_instance action="DELETE" query="flow=7c014f13c39a69d00c7e392115013121^sys_idNOT IN216143d3c39a69d00c7e3921150131b7,ed6143d3c39a69d00c7e3921150131bd,f16143d3c39a69d00c7e3921150131c2"/>
+    <sys_hub_action_instance action="DELETE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Delete Snapshot Record">7c014f13c39a69d00c7e392115013121</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-04-25 00:51:53</sys_created_on>
+        <sys_id>216143d3c39a69d00c7e3921150131b7</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="Photobooth Public Portal">4af2f1c78761a51089790fe5dabb3505</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-04-25 15:28:45</sys_updated_on>
+        <ui_id>c64cfc6f-ab28-44df-89c9-0b0ff6e4f10a</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="DELETE" query="document_key=216143d3c39a69d00c7e3921150131b7"/>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_action_instance</document>
+        <document_key>216143d3c39a69d00c7e3921150131b7</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-04-25 00:51:53</sys_created_on>
+        <sys_id>616143d3c39a69d00c7e3921150131ba</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-04-25 00:51:53</sys_updated_on>
+        <value>x_snc_pb_core_snapshot</value>
+        <variable display_value="Table">d909f99587003300663ca1bb36cb0ba4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="DELETE" query="id=216143d3c39a69d00c7e3921150131b7"/>
+    <sys_element_mapping action="DELETE">
+        <field>conditions</field>
+        <id>216143d3c39a69d00c7e3921150131b7</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-04-25 00:51:53</sys_created_on>
+        <sys_id>296143d3c39a69d00c7e3921150131b9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-04-25 00:51:53</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9d09f99587003300663ca1bb36cb0ba3</table>
+        <value>sys_id={{subflow.snapshot_sys_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>table</field>
+        <id>216143d3c39a69d00c7e3921150131b7</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-04-25 00:51:53</sys_created_on>
+        <sys_id>ed6143d3c39a69d00c7e3921150131b9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-04-25 00:51:53</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9d09f99587003300663ca1bb36cb0ba3</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="DELETE" query="instance=216143d3c39a69d00c7e3921150131b7"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=216143d3c39a69d00c7e3921150131b7"/>
+    <sys_hub_action_instance action="DELETE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Log">5bc1bcc6531003003bf1d9109ec587d4</action_type>
+        <action_type_parent/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Delete Snapshot Record">7c014f13c39a69d00c7e392115013121</flow>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-04-25 00:51:53</sys_created_on>
+        <sys_id>ed6143d3c39a69d00c7e3921150131bd</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="Photobooth Public Portal">4af2f1c78761a51089790fe5dabb3505</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-04-25 15:28:45</sys_updated_on>
+        <ui_id>a1362a73-f40e-47ca-992d-6b4aeab5f508</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="DELETE" query="document_key=ed6143d3c39a69d00c7e3921150131bd"/>
+    <sys_element_mapping action="DELETE" query="id=ed6143d3c39a69d00c7e3921150131bd"/>
+    <sys_element_mapping action="DELETE">
+        <field>log_message</field>
+        <id>ed6143d3c39a69d00c7e3921150131bd</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-04-25 00:51:53</sys_created_on>
+        <sys_id>256143d3c39a69d00c7e3921150131bf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-04-25 00:51:53</sys_updated_on>
+        <table>var__m_sys_hub_action_input_5bc1bcc6531003003bf1d9109ec587d4</table>
+        <value>Delete record: {{subflow.snapshot_sys_id}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="DELETE" query="instance=ed6143d3c39a69d00c7e3921150131bd"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=ed6143d3c39a69d00c7e3921150131bd"/>
+    <sys_hub_action_instance action="DELETE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Delete Record">c3e09916c31332002841b63b12d3aedf</action_type>
+        <action_type_parent/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Delete Snapshot Record">7c014f13c39a69d00c7e392115013121</flow>
+        <order>3</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-04-25 00:51:53</sys_created_on>
+        <sys_id>f16143d3c39a69d00c7e3921150131c2</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="Photobooth Public Portal">4af2f1c78761a51089790fe5dabb3505</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-04-25 15:28:45</sys_updated_on>
+        <ui_id>42f4c95b-a46c-4a77-b269-b84abaa1b9ee</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="DELETE" query="document_key=f16143d3c39a69d00c7e3921150131c2"/>
+    <sys_element_mapping action="DELETE" query="id=f16143d3c39a69d00c7e3921150131c2"/>
+    <sys_element_mapping action="DELETE">
+        <field>record</field>
+        <id>f16143d3c39a69d00c7e3921150131c2</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-04-25 00:51:53</sys_created_on>
+        <sys_id>b96143d3c39a69d00c7e3921150131c3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-04-25 00:51:53</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c3e09916c31332002841b63b12d3aedf</table>
+        <value>{{c64cfc6f-ab28-44df-89c9-0b0ff6e4f10a.Record}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="DELETE" query="instance=f16143d3c39a69d00c7e3921150131c2"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=f16143d3c39a69d00c7e3921150131c2"/>
+    <sys_hub_sub_flow_instance action="DELETE" query="flow=7c014f13c39a69d00c7e392115013121"/>
+    <sys_hub_flow_logic action="DELETE" query="flow=7c014f13c39a69d00c7e392115013121"/>
+    <sys_hub_pill_compound action="DELETE" query="attached_to=7c014f13c39a69d00c7e392115013121"/>
+    <sys_hub_flow_variable action="DELETE" query="model=7c014f13c39a69d00c7e392115013121"/>
+    <sys_documentation action="DELETE" query="name=var__m_sys_hub_flow_input_7c014f13c39a69d00c7e392115013121^sys_idNOT INa56143d3c39a69d00c7e3921150131ac"/>
+    <sys_documentation action="DELETE">
+        <element>snapshot_sys_id</element>
+        <help/>
+        <hint/>
+        <label>Snapshot Sys Id</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_7c014f13c39a69d00c7e392115013121</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-04-25 00:51:53</sys_created_on>
+        <sys_id>a56143d3c39a69d00c7e3921150131ac</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Photobooth Public Portal" source="x_snc_pb_public">4af2f1c78761a51089790fe5dabb3505</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Photobooth Public Portal">4af2f1c78761a51089790fe5dabb3505</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-04-25 00:51:53</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_input_7c014f13c39a69d00c7e392115013121"/>
+    <sys_documentation action="DELETE" query="name=var__m_sys_hub_flow_output_7c014f13c39a69d00c7e392115013121"/>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_output_7c014f13c39a69d00c7e392115013121"/>
+    <sys_flow_trigger_plan action="DELETE" query="plan_id=7c014f13c39a69d00c7e392115013121"/>
+    <sys_flow_subflow_plan action="DELETE" query="plan_id=7c014f13c39a69d00c7e392115013121^sys_idNOT INf17107d3c39a69d00c7e392115013134"/>
+    <sys_flow_subflow_plan action="DELETE">
+        <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_subflow_plan","id":"f17107d3c39a69d00c7e392115013134","name":"plan","plan_signature":null}}</plan>
+        <plan_id display_value="Delete Snapshot Record">7c014f13c39a69d00c7e392115013121</plan_id>
+        <snapshot>9e1a0223c31ea9d00c7e392115013119</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-04-25 00:52:10</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>f17107d3c39a69d00c7e392115013134</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-04-25 00:52:10</sys_updated_on>
+    </sys_flow_subflow_plan>
+    <sys_hub_flow_snapshot action="DELETE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <internal_name>delete_snapshot_record</internal_name>
+        <label_cache>[{"name":"c64cfc6f-ab28-44df-89c9-0b0ff6e4f10a.Record","label":"1 - Look Up Record➛Photobooth Snapshot Record","reference":"x_snc_pb_core_snapshot","reference_display":"Photobooth Snapshot","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"subflow.snapshot_sys_id","label":"Input➛Snapshot Sys Id","type":"string","base_type":"string","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"04fc1195-b33e-4d1b-ac43-c03bf17dd4f1"}}]</label_cache>
+        <master>true</master>
+        <name>Delete Snapshot Record</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Delete Snapshot Record">7c014f13c39a69d00c7e392115013121</parent_flow>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-04-25 00:52:09</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>2d71c3d3c39a69d00c7e3921150131df</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Photobooth Public Portal">4af2f1c78761a51089790fe5dabb3505</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-04-25 00:52:09</sys_updated_on>
+        <type>subflow</type>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="DELETE" query="documentkey=2d71c3d3c39a69d00c7e3921150131df"/>
+    <sys_variable_value action="DELETE" query="document_key=2d71c3d3c39a69d00c7e3921150131df"/>
+    <sys_hub_trigger_instance action="DELETE" query="flow=2d71c3d3c39a69d00c7e3921150131df"/>
+    <sys_hub_flow_stage action="DELETE" query="flow=2d71c3d3c39a69d00c7e3921150131df"/>
+    <sys_flow_cat_variable_model action="DELETE" query="id=2d71c3d3c39a69d00c7e3921150131df^sys_idNOT IN2d71c3d3c39a69d00c7e3921150131e0"/>
+    <sys_flow_cat_variable_model action="DELETE">
+        <id>2d71c3d3c39a69d00c7e3921150131df</id>
+        <name>Delete Snapshot Record</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-04-25 00:52:09</sys_created_on>
+        <sys_id>2d71c3d3c39a69d00c7e3921150131e0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-04-25 00:52:09</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="DELETE" query="flow_catalog_model=2d71c3d3c39a69d00c7e3921150131e0"/>
+    <sys_hub_flow_input action="DELETE" query="model=2d71c3d3c39a69d00c7e3921150131df^sys_idNOT INad71c3d3c39a69d00c7e3921150131e1"/>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=04fc1195-b33e-4d1b-ac43-c03bf17dd4f1</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>snapshot_sys_id</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Snapshot Sys Id</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Delete Snapshot Record">2d71c3d3c39a69d00c7e3921150131df</model>
+        <model_id>2d71c3d3c39a69d00c7e3921150131df</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_2d71c3d3c39a69d00c7e3921150131df</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-04-25 00:52:09</sys_created_on>
+        <sys_id>ad71c3d3c39a69d00c7e3921150131e1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Photobooth Public Portal">4af2f1c78761a51089790fe5dabb3505</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-04-25 00:52:09</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_output action="DELETE" query="model=2d71c3d3c39a69d00c7e3921150131df"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=2d71c3d3c39a69d00c7e3921150131df"/>
+    <sys_hub_action_instance action="DELETE" query="flow=2d71c3d3c39a69d00c7e3921150131df^sys_idNOT IN717107d3c39a69d00c7e392115013113,797107d3c39a69d00c7e39211501310d,a97107d3c39a69d00c7e392115013106"/>
+    <sys_hub_action_instance action="DELETE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Delete Record">c3e09916c31332002841b63b12d3aedf</action_type>
+        <action_type_parent display_value="Delete Record">a8f274c8c3c232002841b63b12d3aee9</action_type_parent>
+        <comment/>
+        <display_text/>
+        <flow display_value="Delete Snapshot Record">2d71c3d3c39a69d00c7e3921150131df</flow>
+        <order>3</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-04-25 00:52:10</sys_created_on>
+        <sys_id>717107d3c39a69d00c7e392115013113</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Photobooth Public Portal">4af2f1c78761a51089790fe5dabb3505</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-04-25 00:52:10</sys_updated_on>
+        <ui_id>42f4c95b-a46c-4a77-b269-b84abaa1b9ee</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="DELETE" query="document_key=717107d3c39a69d00c7e392115013113"/>
+    <sys_element_mapping action="DELETE" query="id=717107d3c39a69d00c7e392115013113"/>
+    <sys_element_mapping action="DELETE">
+        <field>record</field>
+        <id>717107d3c39a69d00c7e392115013113</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-04-25 00:52:10</sys_created_on>
+        <sys_id>b17107d3c39a69d00c7e392115013114</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-04-25 00:52:10</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c3e09916c31332002841b63b12d3aedf</table>
+        <value>{{c64cfc6f-ab28-44df-89c9-0b0ff6e4f10a.Record}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="DELETE" query="instance=717107d3c39a69d00c7e392115013113"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=717107d3c39a69d00c7e392115013113"/>
+    <sys_hub_action_instance action="DELETE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Log">5bc1bcc6531003003bf1d9109ec587d4</action_type>
+        <action_type_parent display_value="Log">0e0ae8c2531003003bf1d9109ec587c8</action_type_parent>
+        <comment/>
+        <display_text/>
+        <flow display_value="Delete Snapshot Record">2d71c3d3c39a69d00c7e3921150131df</flow>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-04-25 00:52:10</sys_created_on>
+        <sys_id>797107d3c39a69d00c7e39211501310d</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Photobooth Public Portal">4af2f1c78761a51089790fe5dabb3505</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-04-25 00:52:10</sys_updated_on>
+        <ui_id>a1362a73-f40e-47ca-992d-6b4aeab5f508</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="DELETE" query="document_key=797107d3c39a69d00c7e39211501310d"/>
+    <sys_element_mapping action="DELETE" query="id=797107d3c39a69d00c7e39211501310d"/>
+    <sys_element_mapping action="DELETE">
+        <field>log_message</field>
+        <id>797107d3c39a69d00c7e39211501310d</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-04-25 00:52:10</sys_created_on>
+        <sys_id>397107d3c39a69d00c7e39211501310e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-04-25 00:52:10</sys_updated_on>
+        <table>var__m_sys_hub_action_input_5bc1bcc6531003003bf1d9109ec587d4</table>
+        <value>Delete record: {{subflow.snapshot_sys_id}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="DELETE" query="instance=797107d3c39a69d00c7e39211501310d"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=797107d3c39a69d00c7e39211501310d"/>
+    <sys_hub_action_instance action="DELETE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <comment/>
+        <display_text/>
+        <flow display_value="Delete Snapshot Record">2d71c3d3c39a69d00c7e3921150131df</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-04-25 00:52:10</sys_created_on>
+        <sys_id>a97107d3c39a69d00c7e392115013106</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Photobooth Public Portal">4af2f1c78761a51089790fe5dabb3505</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-04-25 00:52:10</sys_updated_on>
+        <ui_id>c64cfc6f-ab28-44df-89c9-0b0ff6e4f10a</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="DELETE" query="document_key=a97107d3c39a69d00c7e392115013106"/>
+    <sys_variable_value action="DELETE">
+        <document>sys_hub_action_instance</document>
+        <document_key>a97107d3c39a69d00c7e392115013106</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-04-25 00:52:10</sys_created_on>
+        <sys_id>a57107d3c39a69d00c7e392115013108</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-04-25 00:52:10</sys_updated_on>
+        <value>x_snc_pb_core_snapshot</value>
+        <variable display_value="Table">d909f99587003300663ca1bb36cb0ba4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="DELETE" query="id=a97107d3c39a69d00c7e392115013106"/>
+    <sys_element_mapping action="DELETE">
+        <field>conditions</field>
+        <id>a97107d3c39a69d00c7e392115013106</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-04-25 00:52:10</sys_created_on>
+        <sys_id>617107d3c39a69d00c7e392115013108</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-04-25 00:52:10</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9d09f99587003300663ca1bb36cb0ba3</table>
+        <value>sys_id={{subflow.snapshot_sys_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="DELETE">
+        <field>table</field>
+        <id>a97107d3c39a69d00c7e392115013106</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-04-25 00:52:10</sys_created_on>
+        <sys_id>257107d3c39a69d00c7e392115013108</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-04-25 00:52:10</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9d09f99587003300663ca1bb36cb0ba3</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="DELETE" query="instance=a97107d3c39a69d00c7e392115013106"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=a97107d3c39a69d00c7e392115013106"/>
+    <sys_hub_sub_flow_instance action="DELETE" query="flow=2d71c3d3c39a69d00c7e3921150131df"/>
+    <sys_hub_flow_logic action="DELETE" query="flow=2d71c3d3c39a69d00c7e3921150131df"/>
+    <sys_hub_pill_compound action="DELETE" query="attached_to=2d71c3d3c39a69d00c7e3921150131df"/>
+    <sys_hub_flow_variable action="DELETE" query="model=2d71c3d3c39a69d00c7e3921150131df"/>
+    <sys_documentation action="DELETE" query="name=var__m_sys_hub_flow_input_2d71c3d3c39a69d00c7e3921150131df^sys_idNOT IN2171c3d3c39a69d00c7e3921150131f7"/>
+    <sys_documentation action="DELETE">
+        <element>snapshot_sys_id</element>
+        <help/>
+        <hint/>
+        <label>Snapshot Sys Id</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_2d71c3d3c39a69d00c7e3921150131df</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-04-25 00:52:09</sys_created_on>
+        <sys_id>2171c3d3c39a69d00c7e3921150131f7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Photobooth Public Portal" source="x_snc_pb_public">4af2f1c78761a51089790fe5dabb3505</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Photobooth Public Portal">4af2f1c78761a51089790fe5dabb3505</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-04-25 00:52:09</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_input_2d71c3d3c39a69d00c7e3921150131df"/>
+    <sys_documentation action="DELETE" query="name=var__m_sys_hub_flow_output_2d71c3d3c39a69d00c7e3921150131df"/>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_output_2d71c3d3c39a69d00c7e3921150131df"/>
+    <sys_hub_flow action="DELETE">
+        <sys_id>7c014f13c39a69d00c7e392115013121</sys_id>
+        <latest_snapshot>2d71c3d3c39a69d00c7e3921150131df</latest_snapshot>
+        <compiler_build>glide-tokyo-07-08-2022__patch7-02-16-2023_02-28-2023_1844.zip</compiler_build>
+    </sys_hub_flow>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Photobooth Public Portal">4af2f1c78761a51089790fe5dabb3505</application>
+        <file_path/>
+        <instance_id>634887c3db11915c8aea21c4059619b9</instance_id>
+        <instance_name>tennis</instance_name>
+        <name>sys_hub_flow_7c014f13c39a69d00c7e392115013121</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_hub_flow"&gt;
+    &lt;sys_hub_flow action="INSERT_OR_UPDATE"&gt;
+        &lt;access&gt;public&lt;/access&gt;
+        &lt;acls/&gt;
+        &lt;active&gt;true&lt;/active&gt;
+        &lt;annotation/&gt;
+        &lt;callable_by_client_api&gt;false&lt;/callable_by_client_api&gt;
+        &lt;category/&gt;
+        &lt;copied_from/&gt;
+        &lt;copied_from_name/&gt;
+        &lt;description/&gt;
+        &lt;internal_name&gt;delete_snapshot_record&lt;/internal_name&gt;
+        &lt;label_cache&gt;[{"name":"c64cfc6f-ab28-44df-89c9-0b0ff6e4f10a.Record","label":"1 - Look Up Record➛Photobooth Snapshot Record","reference":"x_snc_pb_core_snapshot","reference_display":"Photobooth Snapshot","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"subflow.snapshot_sys_id","label":"Input➛Snapshot Sys Id","type":"string","base_type":"string","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"04fc1195-b33e-4d1b-ac43-c03bf17dd4f1"}}]&lt;/label_cache&gt;
+        &lt;master_snapshot&gt;2d71c3d3c39a69d00c7e3921150131df&lt;/master_snapshot&gt;
+        &lt;name&gt;Delete Snapshot Record&lt;/name&gt;
+        &lt;natlang/&gt;
+        &lt;outputs/&gt;
+        &lt;pre_compiled&gt;false&lt;/pre_compiled&gt;
+        &lt;remote_trigger_id/&gt;
+        &lt;run_as&gt;system&lt;/run_as&gt;
+        &lt;run_with_roles/&gt;
+        &lt;sc_callable&gt;false&lt;/sc_callable&gt;
+        &lt;show_draft_actions&gt;false&lt;/show_draft_actions&gt;
+        &lt;show_triggered_flows&gt;false&lt;/show_triggered_flows&gt;
+        &lt;status&gt;published&lt;/status&gt;
+        &lt;sys_class_name&gt;sys_hub_flow&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2023-04-25 00:50:12&lt;/sys_created_on&gt;
+        &lt;sys_domain&gt;global&lt;/sys_domain&gt;
+        &lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;
+        &lt;sys_id&gt;7c014f13c39a69d00c7e392115013121&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;
+        &lt;sys_name&gt;Delete Snapshot Record&lt;/sys_name&gt;
+        &lt;sys_overrides/&gt;
+        &lt;sys_package display_value="Photobooth Public Portal" source="x_snc_pb_public"&gt;4af2f1c78761a51089790fe5dabb3505&lt;/sys_package&gt;
+        &lt;sys_policy/&gt;
+        &lt;sys_scope display_value="Photobooth Public Portal"&gt;4af2f1c78761a51089790fe5dabb3505&lt;/sys_scope&gt;
+        &lt;sys_update_name&gt;sys_hub_flow_7c014f13c39a69d00c7e392115013121&lt;/sys_update_name&gt;
+        &lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2023-04-25 00:52:10&lt;/sys_updated_on&gt;
+        &lt;type&gt;subflow&lt;/type&gt;
+    &lt;/sys_hub_flow&gt;
+    &lt;sys_translated_text action="delete_multiple" query="documentkey=7c014f13c39a69d00c7e392115013121"/&gt;
+    &lt;sys_variable_value action="delete_multiple" query="document_key=7c014f13c39a69d00c7e392115013121"/&gt;
+    &lt;sys_hub_trigger_instance action="delete_multiple" query="flow=7c014f13c39a69d00c7e392115013121"/&gt;
+    &lt;sys_hub_flow_stage action="delete_multiple" query="flow=7c014f13c39a69d00c7e392115013121"/&gt;
+    &lt;sys_flow_cat_variable_model action="delete_multiple" query="id=7c014f13c39a69d00c7e392115013121^sys_idNOT INf8014f13c39a69d00c7e392115013122"/&gt;
+    &lt;sys_flow_cat_variable_model action="INSERT_OR_UPDATE"&gt;
+        &lt;id&gt;7c014f13c39a69d00c7e392115013121&lt;/id&gt;
+        &lt;name&gt;Delete Snapshot Record&lt;/name&gt;
+        &lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2023-04-25 00:50:12&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;f8014f13c39a69d00c7e392115013122&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+        &lt;sys_scope/&gt;
+        &lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2023-04-25 00:50:12&lt;/sys_updated_on&gt;
+    &lt;/sys_flow_cat_variable_model&gt;
+    &lt;sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=f8014f13c39a69d00c7e392115013122"/&gt;
+    &lt;sys_hub_flow_input action="delete_multiple" query="model=7c014f13c39a69d00c7e392115013121^sys_idNOT IN296143d3c39a69d00c7e3921150131a8"/&gt;
+    &lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;
+        &lt;active&gt;true&lt;/active&gt;
+        &lt;array&gt;false&lt;/array&gt;
+        &lt;array_denormalized&gt;false&lt;/array_denormalized&gt;
+        &lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=04fc1195-b33e-4d1b-ac43-c03bf17dd4f1&lt;/attributes&gt;
+        &lt;audit&gt;false&lt;/audit&gt;
+        &lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;
+        &lt;choice/&gt;
+        &lt;choice_field/&gt;
+        &lt;choice_table/&gt;
+        &lt;column_label/&gt;
+        &lt;comments/&gt;
+        &lt;create_roles/&gt;
+        &lt;default_value/&gt;
+        &lt;defaultsort/&gt;
+        &lt;delete_roles/&gt;
+        &lt;dependent/&gt;
+        &lt;dependent_on_field/&gt;
+        &lt;display&gt;false&lt;/display&gt;
+        &lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;
+        &lt;dynamic_creation_script/&gt;
+        &lt;dynamic_default_value/&gt;
+        &lt;dynamic_ref_qual/&gt;
+        &lt;element&gt;snapshot_sys_id&lt;/element&gt;
+        &lt;element_reference&gt;false&lt;/element_reference&gt;
+        &lt;foreign_database/&gt;
+        &lt;formula/&gt;
+        &lt;function_definition/&gt;
+        &lt;function_field&gt;false&lt;/function_field&gt;
+        &lt;help/&gt;
+        &lt;hint/&gt;
+        &lt;internal_type display_value="String"&gt;string&lt;/internal_type&gt;
+        &lt;label&gt;Snapshot Sys Id&lt;/label&gt;
+        &lt;mandatory&gt;true&lt;/mandatory&gt;
+        &lt;max_length&gt;8000&lt;/max_length&gt;
+        &lt;model display_value="Delete Snapshot Record"&gt;7c014f13c39a69d00c7e392115013121&lt;/model&gt;
+        &lt;model_id&gt;7c014f13c39a69d00c7e392115013121&lt;/model_id&gt;
+        &lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;
+        &lt;name&gt;var__m_sys_hub_flow_input_7c014f13c39a69d00c7e392115013121&lt;/name&gt;
+        &lt;next_element/&gt;
+        &lt;order&gt;1&lt;/order&gt;
+        &lt;primary&gt;false&lt;/primary&gt;
+        &lt;read_only&gt;false&lt;/read_only&gt;
+        &lt;read_roles/&gt;
+        &lt;reference/&gt;
+        &lt;reference_cascade_rule/&gt;
+        &lt;reference_floats&gt;false&lt;/reference_floats&gt;
+        &lt;reference_key/&gt;
+        &lt;reference_qual/&gt;
+        &lt;reference_qual_condition/&gt;
+        &lt;reference_type/&gt;
+        &lt;sizeclass/&gt;
+        &lt;spell_check&gt;false&lt;/spell_check&gt;
+        &lt;staged&gt;false&lt;/staged&gt;
+        &lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2023-04-25 00:51:53&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;296143d3c39a69d00c7e3921150131a8&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+        &lt;sys_name/&gt;
+        &lt;sys_package/&gt;
+        &lt;sys_policy/&gt;
+        &lt;sys_scope display_value="Photobooth Public Portal"&gt;4af2f1c78761a51089790fe5dabb3505&lt;/sys_scope&gt;
+        &lt;sys_update_name/&gt;
+        &lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2023-04-25 00:51:53&lt;/sys_updated_on&gt;
+        &lt;table_reference&gt;false&lt;/table_reference&gt;
+        &lt;text_index&gt;false&lt;/text_index&gt;
+        &lt;unique&gt;false&lt;/unique&gt;
+        &lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;
+        &lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;
+        &lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;
+        &lt;virtual&gt;false&lt;/virtual&gt;
+        &lt;virtual_type&gt;script&lt;/virtual_type&gt;
+        &lt;widget/&gt;
+        &lt;write_roles/&gt;
+        &lt;xml_view&gt;false&lt;/xml_view&gt;
+    &lt;/sys_hub_flow_input&gt;
+    &lt;sys_hub_flow_output action="delete_multiple" query="model=7c014f13c39a69d00c7e392115013121"/&gt;
+    &lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=7c014f13c39a69d00c7e392115013121"/&gt;
+    &lt;sys_hub_action_instance action="delete_multiple" query="flow=7c014f13c39a69d00c7e392115013121^sys_idNOT IN216143d3c39a69d00c7e3921150131b7,ed6143d3c39a69d00c7e3921150131bd,f16143d3c39a69d00c7e3921150131c2"/&gt;
+    &lt;sys_hub_action_instance action="INSERT_OR_UPDATE"&gt;
+        &lt;action_inputs/&gt;
+        &lt;action_inputs/&gt;
+        &lt;action_type display_value="Look Up Record"&gt;9d09f99587003300663ca1bb36cb0ba3&lt;/action_type&gt;
+        &lt;action_type_parent/&gt;
+        &lt;comment/&gt;
+        &lt;display_text/&gt;
+        &lt;flow display_value="Delete Snapshot Record"&gt;7c014f13c39a69d00c7e392115013121&lt;/flow&gt;
+        &lt;order&gt;1&lt;/order&gt;
+        &lt;parent_ui_id/&gt;
+        &lt;sys_class_name&gt;sys_hub_action_instance&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2023-04-25 00:51:53&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;216143d3c39a69d00c7e3921150131b7&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;8&lt;/sys_mod_count&gt;
+        &lt;sys_scope display_value="Photobooth Public Portal"&gt;4af2f1c78761a51089790fe5dabb3505&lt;/sys_scope&gt;
+        &lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2023-04-25 15:28:45&lt;/sys_updated_on&gt;
+        &lt;ui_id&gt;c64cfc6f-ab28-44df-89c9-0b0ff6e4f10a&lt;/ui_id&gt;
+    &lt;/sys_hub_action_instance&gt;
+    &lt;sys_variable_value action="delete_multiple" query="document_key=216143d3c39a69d00c7e3921150131b7"/&gt;
+    &lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;
+        &lt;document&gt;sys_hub_action_instance&lt;/document&gt;
+        &lt;document_key&gt;216143d3c39a69d00c7e3921150131b7&lt;/document_key&gt;
+        &lt;order&gt;0&lt;/order&gt;
+        &lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2023-04-25 00:51:53&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;616143d3c39a69d00c7e3921150131ba&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+        &lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2023-04-25 00:51:53&lt;/sys_updated_on&gt;
+        &lt;value&gt;x_snc_pb_core_snapshot&lt;/value&gt;
+        &lt;variable display_value="Table"&gt;d909f99587003300663ca1bb36cb0ba4&lt;/variable&gt;
+    &lt;/sys_variable_value&gt;
+    &lt;sys_element_mapping action="delete_multiple" query="id=216143d3c39a69d00c7e3921150131b7"/&gt;
+    &lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;
+        &lt;field&gt;conditions&lt;/field&gt;
+        &lt;id&gt;216143d3c39a69d00c7e3921150131b7&lt;/id&gt;
+        &lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2023-04-25 00:51:53&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;296143d3c39a69d00c7e3921150131b9&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+        &lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2023-04-25 00:51:53&lt;/sys_updated_on&gt;
+        &lt;table&gt;var__m_sys_hub_action_input_9d09f99587003300663ca1bb36cb0ba3&lt;/table&gt;
+        &lt;value&gt;sys_id={{subflow.snapshot_sys_id}}&lt;/value&gt;
+    &lt;/sys_element_mapping&gt;
+    &lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;
+        &lt;field&gt;table&lt;/field&gt;
+        &lt;id&gt;216143d3c39a69d00c7e3921150131b7&lt;/id&gt;
+        &lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2023-04-25 00:51:53&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;ed6143d3c39a69d00c7e3921150131b9&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+        &lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2023-04-25 00:51:53&lt;/sys_updated_on&gt;
+        &lt;table&gt;var__m_sys_hub_action_input_9d09f99587003300663ca1bb36cb0ba3&lt;/table&gt;
+        &lt;value/&gt;
+    &lt;/sys_element_mapping&gt;
+    &lt;sys_hub_input_scripts action="delete_multiple" query="instance=216143d3c39a69d00c7e3921150131b7"/&gt;
+    &lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=216143d3c39a69d00c7e3921150131b7"/&gt;
+    &lt;sys_hub_action_instance action="INSERT_OR_UPDATE"&gt;
+        &lt;action_inputs/&gt;
+        &lt;action_inputs/&gt;
+        &lt;action_type display_value="Log"&gt;5bc1bcc6531003003bf1d9109ec587d4&lt;/action_type&gt;
+        &lt;action_type_parent/&gt;
+        &lt;comment/&gt;
+        &lt;display_text/&gt;
+        &lt;flow display_value="Delete Snapshot Record"&gt;7c014f13c39a69d00c7e392115013121&lt;/flow&gt;
+        &lt;order&gt;2&lt;/order&gt;
+        &lt;parent_ui_id/&gt;
+        &lt;sys_class_name&gt;sys_hub_action_instance&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2023-04-25 00:51:53&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;ed6143d3c39a69d00c7e3921150131bd&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;8&lt;/sys_mod_count&gt;
+        &lt;sys_scope display_value="Photobooth Public Portal"&gt;4af2f1c78761a51089790fe5dabb3505&lt;/sys_scope&gt;
+        &lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2023-04-25 15:28:45&lt;/sys_updated_on&gt;
+        &lt;ui_id&gt;a1362a73-f40e-47ca-992d-6b4aeab5f508&lt;/ui_id&gt;
+    &lt;/sys_hub_action_instance&gt;
+    &lt;sys_variable_value action="delete_multiple" query="document_key=ed6143d3c39a69d00c7e3921150131bd"/&gt;
+    &lt;sys_element_mapping action="delete_multiple" query="id=ed6143d3c39a69d00c7e3921150131bd"/&gt;
+    &lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;
+        &lt;field&gt;log_message&lt;/field&gt;
+        &lt;id&gt;ed6143d3c39a69d00c7e3921150131bd&lt;/id&gt;
+        &lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2023-04-25 00:51:53&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;256143d3c39a69d00c7e3921150131bf&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+        &lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2023-04-25 00:51:53&lt;/sys_updated_on&gt;
+        &lt;table&gt;var__m_sys_hub_action_input_5bc1bcc6531003003bf1d9109ec587d4&lt;/table&gt;
+        &lt;value&gt;Delete record: {{subflow.snapshot_sys_id}}&lt;/value&gt;
+    &lt;/sys_element_mapping&gt;
+    &lt;sys_hub_input_scripts action="delete_multiple" query="instance=ed6143d3c39a69d00c7e3921150131bd"/&gt;
+    &lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=ed6143d3c39a69d00c7e3921150131bd"/&gt;
+    &lt;sys_hub_action_instance action="INSERT_OR_UPDATE"&gt;
+        &lt;action_inputs/&gt;
+        &lt;action_inputs/&gt;
+        &lt;action_type display_value="Delete Record"&gt;c3e09916c31332002841b63b12d3aedf&lt;/action_type&gt;
+        &lt;action_type_parent/&gt;
+        &lt;comment/&gt;
+        &lt;display_text/&gt;
+        &lt;flow display_value="Delete Snapshot Record"&gt;7c014f13c39a69d00c7e392115013121&lt;/flow&gt;
+        &lt;order&gt;3&lt;/order&gt;
+        &lt;parent_ui_id/&gt;
+        &lt;sys_class_name&gt;sys_hub_action_instance&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2023-04-25 00:51:53&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;f16143d3c39a69d00c7e3921150131c2&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;8&lt;/sys_mod_count&gt;
+        &lt;sys_scope display_value="Photobooth Public Portal"&gt;4af2f1c78761a51089790fe5dabb3505&lt;/sys_scope&gt;
+        &lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2023-04-25 15:28:45&lt;/sys_updated_on&gt;
+        &lt;ui_id&gt;42f4c95b-a46c-4a77-b269-b84abaa1b9ee&lt;/ui_id&gt;
+    &lt;/sys_hub_action_instance&gt;
+    &lt;sys_variable_value action="delete_multiple" query="document_key=f16143d3c39a69d00c7e3921150131c2"/&gt;
+    &lt;sys_element_mapping action="delete_multiple" query="id=f16143d3c39a69d00c7e3921150131c2"/&gt;
+    &lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;
+        &lt;field&gt;record&lt;/field&gt;
+        &lt;id&gt;f16143d3c39a69d00c7e3921150131c2&lt;/id&gt;
+        &lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2023-04-25 00:51:53&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;b96143d3c39a69d00c7e3921150131c3&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+        &lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2023-04-25 00:51:53&lt;/sys_updated_on&gt;
+        &lt;table&gt;var__m_sys_hub_action_input_c3e09916c31332002841b63b12d3aedf&lt;/table&gt;
+        &lt;value&gt;{{c64cfc6f-ab28-44df-89c9-0b0ff6e4f10a.Record}}&lt;/value&gt;
+    &lt;/sys_element_mapping&gt;
+    &lt;sys_hub_input_scripts action="delete_multiple" query="instance=f16143d3c39a69d00c7e3921150131c2"/&gt;
+    &lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=f16143d3c39a69d00c7e3921150131c2"/&gt;
+    &lt;sys_hub_sub_flow_instance action="delete_multiple" query="flow=7c014f13c39a69d00c7e392115013121"/&gt;
+    &lt;sys_hub_flow_logic action="delete_multiple" query="flow=7c014f13c39a69d00c7e392115013121"/&gt;
+    &lt;sys_hub_pill_compound action="delete_multiple" query="attached_to=7c014f13c39a69d00c7e392115013121"/&gt;
+    &lt;sys_hub_flow_variable action="delete_multiple" query="model=7c014f13c39a69d00c7e392115013121"/&gt;
+    &lt;sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_7c014f13c39a69d00c7e392115013121^sys_idNOT INa56143d3c39a69d00c7e3921150131ac"/&gt;
+    &lt;sys_documentation action="INSERT_OR_UPDATE"&gt;
+        &lt;element&gt;snapshot_sys_id&lt;/element&gt;
+        &lt;help/&gt;
+        &lt;hint/&gt;
+        &lt;label&gt;Snapshot Sys Id&lt;/label&gt;
+        &lt;language&gt;en&lt;/language&gt;
+        &lt;name&gt;var__m_sys_hub_flow_input_7c014f13c39a69d00c7e392115013121&lt;/name&gt;
+        &lt;plural/&gt;
+        &lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2023-04-25 00:51:53&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;a56143d3c39a69d00c7e3921150131ac&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+        &lt;sys_name/&gt;
+        &lt;sys_package display_value="Photobooth Public Portal" source="x_snc_pb_public"&gt;4af2f1c78761a51089790fe5dabb3505&lt;/sys_package&gt;
+        &lt;sys_policy/&gt;
+        &lt;sys_scope display_value="Photobooth Public Portal"&gt;4af2f1c78761a51089790fe5dabb3505&lt;/sys_scope&gt;
+        &lt;sys_update_name/&gt;
+        &lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2023-04-25 00:51:53&lt;/sys_updated_on&gt;
+        &lt;url/&gt;
+        &lt;url_target/&gt;
+    &lt;/sys_documentation&gt;
+    &lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_7c014f13c39a69d00c7e392115013121"/&gt;
+    &lt;sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_7c014f13c39a69d00c7e392115013121"/&gt;
+    &lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_7c014f13c39a69d00c7e392115013121"/&gt;
+    &lt;sys_flow_trigger_plan action="delete_multiple" query="plan_id=7c014f13c39a69d00c7e392115013121"/&gt;
+    &lt;sys_flow_subflow_plan action="delete_multiple" query="plan_id=7c014f13c39a69d00c7e392115013121^sys_idNOT INf17107d3c39a69d00c7e392115013134"/&gt;
+    &lt;sys_flow_subflow_plan action="INSERT_OR_UPDATE"&gt;
+        &lt;plan&gt;{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_subflow_plan","id":"f17107d3c39a69d00c7e392115013134","name":"plan","plan_signature":null}}&lt;/plan&gt;
+        &lt;plan_id display_value="Delete Snapshot Record"&gt;7c014f13c39a69d00c7e392115013121&lt;/plan_id&gt;
+        &lt;snapshot&gt;9e1a0223c31ea9d00c7e392115013119&lt;/snapshot&gt;
+        &lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2023-04-25 00:52:10&lt;/sys_created_on&gt;
+        &lt;sys_domain&gt;global&lt;/sys_domain&gt;
+        &lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;
+        &lt;sys_id&gt;f17107d3c39a69d00c7e392115013134&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+        &lt;sys_overrides/&gt;
+        &lt;sys_scope/&gt;
+        &lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2023-04-25 00:52:10&lt;/sys_updated_on&gt;
+    &lt;/sys_flow_subflow_plan&gt;
+    &lt;sys_hub_flow_snapshot action="INSERT_OR_UPDATE"&gt;
+        &lt;access&gt;public&lt;/access&gt;
+        &lt;acls/&gt;
+        &lt;active&gt;true&lt;/active&gt;
+        &lt;annotation/&gt;
+        &lt;callable_by_client_api&gt;false&lt;/callable_by_client_api&gt;
+        &lt;category/&gt;
+        &lt;copied_from/&gt;
+        &lt;copied_from_name/&gt;
+        &lt;description/&gt;
+        &lt;internal_name&gt;delete_snapshot_record&lt;/internal_name&gt;
+        &lt;label_cache&gt;[{"name":"c64cfc6f-ab28-44df-89c9-0b0ff6e4f10a.Record","label":"1 - Look Up Record➛Photobooth Snapshot Record","reference":"x_snc_pb_core_snapshot","reference_display":"Photobooth Snapshot","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"subflow.snapshot_sys_id","label":"Input➛Snapshot Sys Id","type":"string","base_type":"string","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"04fc1195-b33e-4d1b-ac43-c03bf17dd4f1"}}]&lt;/label_cache&gt;
+        &lt;master&gt;true&lt;/master&gt;
+        &lt;name&gt;Delete Snapshot Record&lt;/name&gt;
+        &lt;natlang/&gt;
+        &lt;outputs/&gt;
+        &lt;parent_flow display_value="Delete Snapshot Record"&gt;7c014f13c39a69d00c7e392115013121&lt;/parent_flow&gt;
+        &lt;remote_trigger_id/&gt;
+        &lt;run_as&gt;system&lt;/run_as&gt;
+        &lt;run_with_roles/&gt;
+        &lt;sc_callable&gt;false&lt;/sc_callable&gt;
+        &lt;status&gt;published&lt;/status&gt;
+        &lt;sys_class_name&gt;sys_hub_flow_snapshot&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2023-04-25 00:52:09&lt;/sys_created_on&gt;
+        &lt;sys_domain&gt;global&lt;/sys_domain&gt;
+        &lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;
+        &lt;sys_id&gt;2d71c3d3c39a69d00c7e3921150131df&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+        &lt;sys_name/&gt;
+        &lt;sys_overrides/&gt;
+        &lt;sys_package/&gt;
+        &lt;sys_policy/&gt;
+        &lt;sys_scope display_value="Photobooth Public Portal"&gt;4af2f1c78761a51089790fe5dabb3505&lt;/sys_scope&gt;
+        &lt;sys_update_name/&gt;
+        &lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2023-04-25 00:52:09&lt;/sys_updated_on&gt;
+        &lt;type&gt;subflow&lt;/type&gt;
+    &lt;/sys_hub_flow_snapshot&gt;
+    &lt;sys_translated_text action="delete_multiple" query="documentkey=2d71c3d3c39a69d00c7e3921150131df"/&gt;
+    &lt;sys_variable_value action="delete_multiple" query="document_key=2d71c3d3c39a69d00c7e3921150131df"/&gt;
+    &lt;sys_hub_trigger_instance action="delete_multiple" query="flow=2d71c3d3c39a69d00c7e3921150131df"/&gt;
+    &lt;sys_hub_flow_stage action="delete_multiple" query="flow=2d71c3d3c39a69d00c7e3921150131df"/&gt;
+    &lt;sys_flow_cat_variable_model action="delete_multiple" query="id=2d71c3d3c39a69d00c7e3921150131df^sys_idNOT IN2d71c3d3c39a69d00c7e3921150131e0"/&gt;
+    &lt;sys_flow_cat_variable_model action="INSERT_OR_UPDATE"&gt;
+        &lt;id&gt;2d71c3d3c39a69d00c7e3921150131df&lt;/id&gt;
+        &lt;name&gt;Delete Snapshot Record&lt;/name&gt;
+        &lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2023-04-25 00:52:09&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;2d71c3d3c39a69d00c7e3921150131e0&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+        &lt;sys_scope/&gt;
+        &lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2023-04-25 00:52:09&lt;/sys_updated_on&gt;
+    &lt;/sys_flow_cat_variable_model&gt;
+    &lt;sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=2d71c3d3c39a69d00c7e3921150131e0"/&gt;
+    &lt;sys_hub_flow_input action="delete_multiple" query="model=2d71c3d3c39a69d00c7e3921150131df^sys_idNOT INad71c3d3c39a69d00c7e3921150131e1"/&gt;
+    &lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;
+        &lt;active&gt;true&lt;/active&gt;
+        &lt;array&gt;false&lt;/array&gt;
+        &lt;array_denormalized&gt;false&lt;/array_denormalized&gt;
+        &lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=04fc1195-b33e-4d1b-ac43-c03bf17dd4f1&lt;/attributes&gt;
+        &lt;audit&gt;false&lt;/audit&gt;
+        &lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;
+        &lt;choice/&gt;
+        &lt;choice_field/&gt;
+        &lt;choice_table/&gt;
+        &lt;column_label/&gt;
+        &lt;comments/&gt;
+        &lt;create_roles/&gt;
+        &lt;default_value/&gt;
+        &lt;defaultsort/&gt;
+        &lt;delete_roles/&gt;
+        &lt;dependent/&gt;
+        &lt;dependent_on_field/&gt;
+        &lt;display&gt;false&lt;/display&gt;
+        &lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;
+        &lt;dynamic_creation_script/&gt;
+        &lt;dynamic_default_value/&gt;
+        &lt;dynamic_ref_qual/&gt;
+        &lt;element&gt;snapshot_sys_id&lt;/element&gt;
+        &lt;element_reference&gt;false&lt;/element_reference&gt;
+        &lt;foreign_database/&gt;
+        &lt;formula/&gt;
+        &lt;function_definition/&gt;
+        &lt;function_field&gt;false&lt;/function_field&gt;
+        &lt;help/&gt;
+        &lt;hint/&gt;
+        &lt;internal_type display_value="String"&gt;string&lt;/internal_type&gt;
+        &lt;label&gt;Snapshot Sys Id&lt;/label&gt;
+        &lt;mandatory&gt;true&lt;/mandatory&gt;
+        &lt;max_length&gt;8000&lt;/max_length&gt;
+        &lt;model display_value="Delete Snapshot Record"&gt;2d71c3d3c39a69d00c7e3921150131df&lt;/model&gt;
+        &lt;model_id&gt;2d71c3d3c39a69d00c7e3921150131df&lt;/model_id&gt;
+        &lt;model_table&gt;sys_hub_flow_snapshot&lt;/model_table&gt;
+        &lt;name&gt;var__m_sys_hub_flow_input_2d71c3d3c39a69d00c7e3921150131df&lt;/name&gt;
+        &lt;next_element/&gt;
+        &lt;order&gt;1&lt;/order&gt;
+        &lt;primary&gt;false&lt;/primary&gt;
+        &lt;read_only&gt;false&lt;/read_only&gt;
+        &lt;read_roles/&gt;
+        &lt;reference/&gt;
+        &lt;reference_cascade_rule/&gt;
+        &lt;reference_floats&gt;false&lt;/reference_floats&gt;
+        &lt;reference_key/&gt;
+        &lt;reference_qual/&gt;
+        &lt;reference_qual_condition/&gt;
+        &lt;reference_type/&gt;
+        &lt;sizeclass/&gt;
+        &lt;spell_check&gt;false&lt;/spell_check&gt;
+        &lt;staged&gt;false&lt;/staged&gt;
+        &lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2023-04-25 00:52:09&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;ad71c3d3c39a69d00c7e3921150131e1&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+        &lt;sys_name/&gt;
+        &lt;sys_package/&gt;
+        &lt;sys_policy/&gt;
+        &lt;sys_scope display_value="Photobooth Public Portal"&gt;4af2f1c78761a51089790fe5dabb3505&lt;/sys_scope&gt;
+        &lt;sys_update_name/&gt;
+        &lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2023-04-25 00:52:09&lt;/sys_updated_on&gt;
+        &lt;table_reference&gt;false&lt;/table_reference&gt;
+        &lt;text_index&gt;false&lt;/text_index&gt;
+        &lt;unique&gt;false&lt;/unique&gt;
+        &lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;
+        &lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;
+        &lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;
+        &lt;virtual&gt;false&lt;/virtual&gt;
+        &lt;virtual_type&gt;script&lt;/virtual_type&gt;
+        &lt;widget/&gt;
+        &lt;write_roles/&gt;
+        &lt;xml_view&gt;false&lt;/xml_view&gt;
+    &lt;/sys_hub_flow_input&gt;
+    &lt;sys_hub_flow_output action="delete_multiple" query="model=2d71c3d3c39a69d00c7e3921150131df"/&gt;
+    &lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=2d71c3d3c39a69d00c7e3921150131df"/&gt;
+    &lt;sys_hub_action_instance action="delete_multiple" query="flow=2d71c3d3c39a69d00c7e3921150131df^sys_idNOT IN717107d3c39a69d00c7e392115013113,797107d3c39a69d00c7e39211501310d,a97107d3c39a69d00c7e392115013106"/&gt;
+    &lt;sys_hub_action_instance action="INSERT_OR_UPDATE"&gt;
+        &lt;action_inputs/&gt;
+        &lt;action_inputs/&gt;
+        &lt;action_type display_value="Delete Record"&gt;c3e09916c31332002841b63b12d3aedf&lt;/action_type&gt;
+        &lt;action_type_parent display_value="Delete Record"&gt;a8f274c8c3c232002841b63b12d3aee9&lt;/action_type_parent&gt;
+        &lt;comment/&gt;
+        &lt;display_text/&gt;
+        &lt;flow display_value="Delete Snapshot Record"&gt;2d71c3d3c39a69d00c7e3921150131df&lt;/flow&gt;
+        &lt;order&gt;3&lt;/order&gt;
+        &lt;parent_ui_id/&gt;
+        &lt;sys_class_name&gt;sys_hub_action_instance&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2023-04-25 00:52:10&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;717107d3c39a69d00c7e392115013113&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;
+        &lt;sys_scope display_value="Photobooth Public Portal"&gt;4af2f1c78761a51089790fe5dabb3505&lt;/sys_scope&gt;
+        &lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2023-04-25 00:52:10&lt;/sys_updated_on&gt;
+        &lt;ui_id&gt;42f4c95b-a46c-4a77-b269-b84abaa1b9ee&lt;/ui_id&gt;
+    &lt;/sys_hub_action_instance&gt;
+    &lt;sys_variable_value action="delete_multiple" query="document_key=717107d3c39a69d00c7e392115013113"/&gt;
+    &lt;sys_element_mapping action="delete_multiple" query="id=717107d3c39a69d00c7e392115013113"/&gt;
+    &lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;
+        &lt;field&gt;record&lt;/field&gt;
+        &lt;id&gt;717107d3c39a69d00c7e392115013113&lt;/id&gt;
+        &lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2023-04-25 00:52:10&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;b17107d3c39a69d00c7e392115013114&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+        &lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2023-04-25 00:52:10&lt;/sys_updated_on&gt;
+        &lt;table&gt;var__m_sys_hub_action_input_c3e09916c31332002841b63b12d3aedf&lt;/table&gt;
+        &lt;value&gt;{{c64cfc6f-ab28-44df-89c9-0b0ff6e4f10a.Record}}&lt;/value&gt;
+    &lt;/sys_element_mapping&gt;
+    &lt;sys_hub_input_scripts action="delete_multiple" query="instance=717107d3c39a69d00c7e392115013113"/&gt;
+    &lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=717107d3c39a69d00c7e392115013113"/&gt;
+    &lt;sys_hub_action_instance action="INSERT_OR_UPDATE"&gt;
+        &lt;action_inputs/&gt;
+        &lt;action_inputs/&gt;
+        &lt;action_type display_value="Log"&gt;5bc1bcc6531003003bf1d9109ec587d4&lt;/action_type&gt;
+        &lt;action_type_parent display_value="Log"&gt;0e0ae8c2531003003bf1d9109ec587c8&lt;/action_type_parent&gt;
+        &lt;comment/&gt;
+        &lt;display_text/&gt;
+        &lt;flow display_value="Delete Snapshot Record"&gt;2d71c3d3c39a69d00c7e3921150131df&lt;/flow&gt;
+        &lt;order&gt;2&lt;/order&gt;
+        &lt;parent_ui_id/&gt;
+        &lt;sys_class_name&gt;sys_hub_action_instance&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2023-04-25 00:52:10&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;797107d3c39a69d00c7e39211501310d&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;
+        &lt;sys_scope display_value="Photobooth Public Portal"&gt;4af2f1c78761a51089790fe5dabb3505&lt;/sys_scope&gt;
+        &lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2023-04-25 00:52:10&lt;/sys_updated_on&gt;
+        &lt;ui_id&gt;a1362a73-f40e-47ca-992d-6b4aeab5f508&lt;/ui_id&gt;
+    &lt;/sys_hub_action_instance&gt;
+    &lt;sys_variable_value action="delete_multiple" query="document_key=797107d3c39a69d00c7e39211501310d"/&gt;
+    &lt;sys_element_mapping action="delete_multiple" query="id=797107d3c39a69d00c7e39211501310d"/&gt;
+    &lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;
+        &lt;field&gt;log_message&lt;/field&gt;
+        &lt;id&gt;797107d3c39a69d00c7e39211501310d&lt;/id&gt;
+        &lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2023-04-25 00:52:10&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;397107d3c39a69d00c7e39211501310e&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+        &lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2023-04-25 00:52:10&lt;/sys_updated_on&gt;
+        &lt;table&gt;var__m_sys_hub_action_input_5bc1bcc6531003003bf1d9109ec587d4&lt;/table&gt;
+        &lt;value&gt;Delete record: {{subflow.snapshot_sys_id}}&lt;/value&gt;
+    &lt;/sys_element_mapping&gt;
+    &lt;sys_hub_input_scripts action="delete_multiple" query="instance=797107d3c39a69d00c7e39211501310d"/&gt;
+    &lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=797107d3c39a69d00c7e39211501310d"/&gt;
+    &lt;sys_hub_action_instance action="INSERT_OR_UPDATE"&gt;
+        &lt;action_inputs/&gt;
+        &lt;action_inputs/&gt;
+        &lt;action_type display_value="Look Up Record"&gt;9d09f99587003300663ca1bb36cb0ba3&lt;/action_type&gt;
+        &lt;action_type_parent display_value="Look Up Record"&gt;b93f42810b30030085c083eb37673a63&lt;/action_type_parent&gt;
+        &lt;comment/&gt;
+        &lt;display_text/&gt;
+        &lt;flow display_value="Delete Snapshot Record"&gt;2d71c3d3c39a69d00c7e3921150131df&lt;/flow&gt;
+        &lt;order&gt;1&lt;/order&gt;
+        &lt;parent_ui_id/&gt;
+        &lt;sys_class_name&gt;sys_hub_action_instance&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2023-04-25 00:52:10&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;a97107d3c39a69d00c7e392115013106&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;
+        &lt;sys_scope display_value="Photobooth Public Portal"&gt;4af2f1c78761a51089790fe5dabb3505&lt;/sys_scope&gt;
+        &lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2023-04-25 00:52:10&lt;/sys_updated_on&gt;
+        &lt;ui_id&gt;c64cfc6f-ab28-44df-89c9-0b0ff6e4f10a&lt;/ui_id&gt;
+    &lt;/sys_hub_action_instance&gt;
+    &lt;sys_variable_value action="delete_multiple" query="document_key=a97107d3c39a69d00c7e392115013106"/&gt;
+    &lt;sys_variable_value action="INSERT_OR_UPDATE"&gt;
+        &lt;document&gt;sys_hub_action_instance&lt;/document&gt;
+        &lt;document_key&gt;a97107d3c39a69d00c7e392115013106&lt;/document_key&gt;
+        &lt;order&gt;0&lt;/order&gt;
+        &lt;sys_class_name&gt;sys_variable_value&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2023-04-25 00:52:10&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;a57107d3c39a69d00c7e392115013108&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+        &lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2023-04-25 00:52:10&lt;/sys_updated_on&gt;
+        &lt;value&gt;x_snc_pb_core_snapshot&lt;/value&gt;
+        &lt;variable display_value="Table"&gt;d909f99587003300663ca1bb36cb0ba4&lt;/variable&gt;
+    &lt;/sys_variable_value&gt;
+    &lt;sys_element_mapping action="delete_multiple" query="id=a97107d3c39a69d00c7e392115013106"/&gt;
+    &lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;
+        &lt;field&gt;conditions&lt;/field&gt;
+        &lt;id&gt;a97107d3c39a69d00c7e392115013106&lt;/id&gt;
+        &lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2023-04-25 00:52:10&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;617107d3c39a69d00c7e392115013108&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+        &lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2023-04-25 00:52:10&lt;/sys_updated_on&gt;
+        &lt;table&gt;var__m_sys_hub_action_input_9d09f99587003300663ca1bb36cb0ba3&lt;/table&gt;
+        &lt;value&gt;sys_id={{subflow.snapshot_sys_id}}&lt;/value&gt;
+    &lt;/sys_element_mapping&gt;
+    &lt;sys_element_mapping action="INSERT_OR_UPDATE"&gt;
+        &lt;field&gt;table&lt;/field&gt;
+        &lt;id&gt;a97107d3c39a69d00c7e392115013106&lt;/id&gt;
+        &lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2023-04-25 00:52:10&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;257107d3c39a69d00c7e392115013108&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+        &lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2023-04-25 00:52:10&lt;/sys_updated_on&gt;
+        &lt;table&gt;var__m_sys_hub_action_input_9d09f99587003300663ca1bb36cb0ba3&lt;/table&gt;
+        &lt;value/&gt;
+    &lt;/sys_element_mapping&gt;
+    &lt;sys_hub_input_scripts action="delete_multiple" query="instance=a97107d3c39a69d00c7e392115013106"/&gt;
+    &lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=a97107d3c39a69d00c7e392115013106"/&gt;
+    &lt;sys_hub_sub_flow_instance action="delete_multiple" query="flow=2d71c3d3c39a69d00c7e3921150131df"/&gt;
+    &lt;sys_hub_flow_logic action="delete_multiple" query="flow=2d71c3d3c39a69d00c7e3921150131df"/&gt;
+    &lt;sys_hub_pill_compound action="delete_multiple" query="attached_to=2d71c3d3c39a69d00c7e3921150131df"/&gt;
+    &lt;sys_hub_flow_variable action="delete_multiple" query="model=2d71c3d3c39a69d00c7e3921150131df"/&gt;
+    &lt;sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_2d71c3d3c39a69d00c7e3921150131df^sys_idNOT IN2171c3d3c39a69d00c7e3921150131f7"/&gt;
+    &lt;sys_documentation action="INSERT_OR_UPDATE"&gt;
+        &lt;element&gt;snapshot_sys_id&lt;/element&gt;
+        &lt;help/&gt;
+        &lt;hint/&gt;
+        &lt;label&gt;Snapshot Sys Id&lt;/label&gt;
+        &lt;language&gt;en&lt;/language&gt;
+        &lt;name&gt;var__m_sys_hub_flow_input_2d71c3d3c39a69d00c7e3921150131df&lt;/name&gt;
+        &lt;plural/&gt;
+        &lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2023-04-25 00:52:09&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;2171c3d3c39a69d00c7e3921150131f7&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+        &lt;sys_name/&gt;
+        &lt;sys_package display_value="Photobooth Public Portal" source="x_snc_pb_public"&gt;4af2f1c78761a51089790fe5dabb3505&lt;/sys_package&gt;
+        &lt;sys_policy/&gt;
+        &lt;sys_scope display_value="Photobooth Public Portal"&gt;4af2f1c78761a51089790fe5dabb3505&lt;/sys_scope&gt;
+        &lt;sys_update_name/&gt;
+        &lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2023-04-25 00:52:09&lt;/sys_updated_on&gt;
+        &lt;url/&gt;
+        &lt;url_target/&gt;
+    &lt;/sys_documentation&gt;
+    &lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_2d71c3d3c39a69d00c7e3921150131df"/&gt;
+    &lt;sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_2d71c3d3c39a69d00c7e3921150131df"/&gt;
+    &lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_2d71c3d3c39a69d00c7e3921150131df"/&gt;
+    &lt;sys_hub_flow action="UPDATE"&gt;
+        &lt;sys_id&gt;7c014f13c39a69d00c7e392115013121&lt;/sys_id&gt;
+        &lt;latest_snapshot&gt;2d71c3d3c39a69d00c7e3921150131df&lt;/latest_snapshot&gt;
+        &lt;compiler_build&gt;glide-tokyo-07-08-2022__patch7-02-16-2023_02-28-2023_1844.zip&lt;/compiler_build&gt;
+    &lt;/sys_hub_flow&gt;
+&lt;/record_update&gt;</payload>
+        <payload_hash>792467280</payload_hash>
+        <record_name>Delete Snapshot Record</record_name>
+        <reverted_from/>
+        <source>517513bd47e6e110552caf52736d4364</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>jon.lind</sys_created_by>
+        <sys_created_on>2023-05-02 20:44:27</sys_created_on>
+        <sys_id>5f7553bd47e6e110552caf52736d43ed</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>187de359bca0000001</sys_recorded_at>
+        <sys_updated_by>jon.lind</sys_updated_by>
+        <sys_updated_on>2023-05-02 20:44:27</sys_updated_on>
+        <type>Flow</type>
+        <update_guid>9b7553bd47e6e1100b6b87ab7aa210ed</update_guid>
+        <update_guid_history>9b7553bd47e6e1100b6b87ab7aa210ed:0,1b7553bd76e6e110dc259ebc08453eec:1669712115</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>jon.lind</sys_created_by>
+        <sys_created_on>2023-05-04 21:41:28</sys_created_on>
+        <sys_db_object display_value="" name="sys_hub_flow">sys_hub_flow</sys_db_object>
+        <sys_id>08c3464989f241d08d9fcf56ef4a9900</sys_id>
+        <sys_metadata>7c014f13c39a69d00c7e392115013121</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Delete Snapshot Record</sys_name>
+        <sys_package display_value="Photobooth Public Portal" source="x_snc_pb_public">4af2f1c78761a51089790fe5dabb3505</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Photobooth Public Portal">4af2f1c78761a51089790fe5dabb3505</sys_scope>
+        <sys_scope_delete display_value="">0d51489177394c7093dca9f9e08a9fd9</sys_scope_delete>
+        <sys_update_name>sys_hub_flow_7c014f13c39a69d00c7e392115013121</sys_update_name>
+        <sys_update_version display_value="sys_hub_flow_7c014f13c39a69d00c7e392115013121">5f7553bd47e6e110552caf52736d43ed</sys_update_version>
+        <sys_updated_by>jon.lind</sys_updated_by>
+        <sys_updated_on>2023-05-04 21:41:28</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -8,9 +8,19 @@
 	c.currentImageIndex = 0;
 	
 	c.isRequestValid = c.data.requests.length > 0 ? true : false;
+	if(c.isRequestValid){
+		invalidateRequestWithNoSnapshots();
+	}
 	
 	if (c.data.requests.length > 0) {
 		c.shareEmail = c.data.requests[0].email || "";
+	}
+	
+	function invalidateRequestWithNoSnapshots() {
+		if(!c.data.images.length){
+			c.isRequestValid = false;
+			c.options.invalid_url_text = "This request has no snapshots. Perhaps they were all deleted?";
+		}
 	}
 		c.isMuralButtonDisabled = function() {
 			if (c.data.images[c.currentImageIndex].type == 'main')
@@ -57,6 +67,13 @@
 			payload.action = "delete-snapshot";
 			payload.sysId = c.data.images[c.currentImageIndex].snapshotId;
 			c.server.get(payload);
+			
+			c.data.images.splice(c.currentImageIndex, 1);
+			if(c.currentImageIndex >= c.data.images.length){
+				c.currentImageIndex--;
+			}
+			
+			invalidateRequestWithNoSnapshots();
 
 			$scope.closeDeleteSnapshotModal();
 		};
@@ -340,14 +357,14 @@
         <sys_created_by>alex.russian</sys_created_by>
         <sys_created_on>2023-03-22 21:23:40</sys_created_on>
         <sys_id>e725d87087f9e910fb8dfd57dabb3520</sys_id>
-        <sys_mod_count>209</sys_mod_count>
+        <sys_mod_count>215</sys_mod_count>
         <sys_name>K23 Portal Main Widget</sys_name>
         <sys_package display_value="Photobooth Public Portal" source="x_snc_pb_public">4af2f1c78761a51089790fe5dabb3505</sys_package>
         <sys_policy/>
         <sys_scope display_value="Photobooth Public Portal">4af2f1c78761a51089790fe5dabb3505</sys_scope>
         <sys_update_name>sp_widget_e725d87087f9e910fb8dfd57dabb3520</sys_update_name>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-05-03 18:32:31</sys_updated_on>
+        <sys_updated_by>jon.lind</sys_updated_by>
+        <sys_updated_on>2023-05-04 22:04:03</sys_updated_on>
         <template><![CDATA[<div class="main-widget-container">
   <div class="invalid-request-container" ng-if="!c.isRequestValid">
     <h1 class="invalid-request-header">

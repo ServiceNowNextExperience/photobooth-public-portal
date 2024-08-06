@@ -21,8 +21,10 @@ $sp-logo-margin-x:1rem;
 $btn-default-bg:#fff;
 $text-muted:#979797;
 </css_variables>
+        <dark_theme/>
         <default>false</default>
         <enable_ais>false</enable_ais>
+        <enable_certificate_based_authentication>false</enable_certificate_based_authentication>
         <enable_favorites>false</enable_favorites>
         <hide_portal_name>false</hide_portal_name>
         <homepage display_value="home">6be3183087f9e910fb8dfd57dabb3530</homepage>
@@ -33,6 +35,7 @@ $text-muted:#979797;
         <logo>a0d6d4f087f9e910fb8dfd57dabb3526</logo>
         <notfound_page/>
         <quick_start_config/>
+        <rtl_enabled>false</rtl_enabled>
         <sc_catalog/>
         <sc_catalog_page/>
         <sc_category_page/>
@@ -44,16 +47,16 @@ $text-muted:#979797;
         <sys_created_by>alex.russian</sys_created_by>
         <sys_created_on>2023-03-22 19:10:29</sys_created_on>
         <sys_id>fab67ba48779e910fb8dfd57dabb3571</sys_id>
-        <sys_mod_count>10</sys_mod_count>
-        <sys_name>K23 Photobooth Portal</sys_name>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name>Photobooth Portal</sys_name>
         <sys_package display_value="Photobooth Public Portal" source="x_snc_pb_public">4af2f1c78761a51089790fe5dabb3505</sys_package>
         <sys_policy/>
         <sys_scope display_value="Photobooth Public Portal">4af2f1c78761a51089790fe5dabb3505</sys_scope>
         <sys_update_name>sp_portal_fab67ba48779e910fb8dfd57dabb3571</sys_update_name>
         <sys_updated_by>jon.lind</sys_updated_by>
-        <sys_updated_on>2023-05-02 22:06:40</sys_updated_on>
-        <theme display_value="K23 Photobooth Portal">1ac594b087f9e910fb8dfd57dabb35f4</theme>
-        <title>K23 Photobooth Portal</title>
+        <sys_updated_on>2024-04-02 18:55:52</sys_updated_on>
+        <theme display_value="Photobooth Portal">1ac594b087f9e910fb8dfd57dabb35f4</theme>
+        <title>Photobooth Portal</title>
         <ts_index_group/>
         <url_suffix>pb</url_suffix>
     </sp_portal>
